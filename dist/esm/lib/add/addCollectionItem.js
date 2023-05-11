@@ -1,19 +1,19 @@
 import { collection, add, get, upset } from 'typesaurus';
 import { getTimestamp } from '@/utils/time';
-export const addCollectionItem = async (collectionName, params, id) => {
+export const addCollectionItem = async (params) => {
     try {
-        const mainCollection = collection(collectionName);
+        const mainCollection = collection(params.collectionName);
         const datetimeNow = getTimestamp();
         const data = {
-            ...params,
+            ...params.body,
             createdAt: datetimeNow,
             updatedAt: datetimeNow,
         };
-        if (!id) {
+        if (!params.id) {
             return await add(mainCollection, data);
         }
         else {
-            const collectionId = id || '1';
+            const collectionId = params.id || '1';
             await upset(mainCollection, collectionId, data);
             const collectionRef = await get(mainCollection, collectionId);
             if (!collectionRef)
@@ -22,7 +22,7 @@ export const addCollectionItem = async (collectionName, params, id) => {
         }
     }
     catch (error) {
-        throw new Error(`add ${collectionName}: ${error}`);
+        throw new Error(`addCollectionItem: ${error}`);
     }
 };
 //# sourceMappingURL=addCollectionItem.js.map
