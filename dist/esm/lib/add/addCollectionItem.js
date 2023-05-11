@@ -1,19 +1,19 @@
 import { collection, add, get, upset } from 'typesaurus';
 import { getTimestamp } from '@/utils/time';
-export const addCollectionItem = async (params) => {
+export const addCollectionItem = async (collectionName, params, id) => {
     try {
-        const mainCollection = collection(params.collectionName);
+        const mainCollection = collection(collectionName);
         const datetimeNow = getTimestamp();
         const data = {
-            ...params.body,
+            ...params,
             createdAt: datetimeNow,
             updatedAt: datetimeNow,
         };
-        if (!params.id) {
+        if (!id) {
             return await add(mainCollection, data);
         }
         else {
-            const collectionId = params.id || '1';
+            const collectionId = id || '1';
             await upset(mainCollection, collectionId, data);
             const collectionRef = await get(mainCollection, collectionId);
             if (!collectionRef)

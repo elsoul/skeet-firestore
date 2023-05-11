@@ -1,7 +1,2 @@
 import { Ref } from 'typesaurus';
-export type AddCollectionItemParams<T> = {
-    collectionName: string;
-    body: T;
-    id?: string;
-};
-export declare const addCollectionItem: <T>(params: AddCollectionItemParams<T>) => Promise<Ref<T>>;
+export declare const addCollectionItem: <T>(collectionName: string, params: T, id?: string) => Promise<Ref<T>>;

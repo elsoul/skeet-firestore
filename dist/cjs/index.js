@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isChildItemExists = exports.isItemExists = exports.getGrandChildCollectionItems = exports.getChildCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
+exports.upset = exports.get = exports.add = exports.collection = exports.isChildItemExists = exports.isItemExists = exports.getGrandChildCollectionItems = exports.getChildCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
 const lib_1 = require("@/lib");
 Object.defineProperty(exports, "addCollectionItem", { enumerable: true, get: function () { return lib_1.addCollectionItem; } });
 Object.defineProperty(exports, "addChildCollectionItem", { enumerable: true, get: function () { return lib_1.addChildCollectionItem; } });
@@ -34,6 +34,11 @@ Object.defineProperty(exports, "getChildCollectionItem", { enumerable: true, get
 Object.defineProperty(exports, "getGrandChildCollectionItems", { enumerable: true, get: function () { return lib_1.getGrandChildCollectionItems; } });
 Object.defineProperty(exports, "isItemExists", { enumerable: true, get: function () { return lib_1.isItemExists; } });
 Object.defineProperty(exports, "isChildItemExists", { enumerable: true, get: function () { return lib_1.isChildItemExists; } });
+const typesaurus_1 = require("typesaurus");
+Object.defineProperty(exports, "collection", { enumerable: true, get: function () { return typesaurus_1.collection; } });
+Object.defineProperty(exports, "add", { enumerable: true, get: function () { return typesaurus_1.add; } });
+Object.defineProperty(exports, "get", { enumerable: true, get: function () { return typesaurus_1.get; } });
+Object.defineProperty(exports, "upset", { enumerable: true, get: function () { return typesaurus_1.upset; } });
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 //# sourceMappingURL=index.js.map
