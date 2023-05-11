@@ -13,121 +13,61 @@
   <a aria-label="Downloads Number" href="https://www.npmjs.com/package/skeet">
     <img alt="" src="https://badgen.net/npm/dt/skeet">
   </a>
-  <a aria-label="License" href="https://github.com/elsoul/skeet/blob/master/LICENSE.txt">
+  <a aria-label="License" href="https://github.com/elsoul/skeet-cli/blob/master/LICENSE.txt">
     <img alt="" src="https://badgen.net/badge/license/Apache/blue">
   </a>
-    <a aria-label="Code of Conduct" href="https://github.com/elsoul/skeet/blob/master/CODE_OF_CONDUCT.md">
+    <a aria-label="Code of Conduct" href="https://github.com/elsoul/skeet-cli/blob/master/CODE_OF_CONDUCT.md">
     <img alt="" src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg">
   </a>
 </p>
 
-# Skeet API Plugin - Solana Transfer
-
-The Skeet Worker Solana Transfer plugin consists of two primary functions:
-
-- `skeetSolTransfer`
-
-- `skeetSplTransfer`
-
-Skeet Solana Transfer container will be automatically deployed on Google Cloud by Skeet CLI.
-Skeet API executes Google Cloud Tasks to run Skeet Worker.
+# Skeet Framework Plugin - Firestore
 
 ## Install
 
-### Add Skeet Worker Plugin
-
 ```bash
-$ skeet add workerPlugin
-? Select Services to deploy (Use arrow keys)
-   = Plugins =
-❯ solana-transfer
-  orca-swap
-  jupiter-swap
-```
-
-Select `solana-transfer`
-
-### Add Plugin
-
-```bash
-$ skeet add yarn -p @skeet-framework/api-plugin-solana-transfer
+$ skeet add yarn -p @skeet-framework/firestore
 ```
 
 ## Usage
 
-### Send Sol
+### Create Firestore Collection/Document
 
-```javascript
-import { generateIv } from '@/lib/crypto'
-import { genKeypair, getKeypairData } from '@/lib/solanaUtils'
-import {
-  skeetSolTransfer,
-  SkeetSolTransferParam,
-} from '@skeet-framework/api-plugin-solana-transfer'
+Autogenerate ID String
 
-const queueId = 1 // optional
-const fromKeypair = await genKeypair()
-const toKeypair = await genKeypair()
-const keypairData = await getKeypairData(fromKeypair)
-const iv = await generateIv() // decrypt key for worker
-const rpcUrl = 'https://api.devnet.solana.com/'
-const encodedFromSecretKeyString = await decrypt(
-  keypairData.unit8Array.join(','),
-  iv
-)
+```typescript
+import { addCollectionItem } from '@skeet-framework/firestore'
+import { User } from '@/models/userModels.ts'
 
-const transferSol = async () => {
-  const skeetSolTransferParam: SkeetSolTransferParam = {
-    id: queueId,
-    toAddressPubkey: toKeypair.pubkey.toBase58(),
-    transferAmountLamport: 1000,
-    encodedFromSecretKeyString,
-    iv: iv.toString('base64'),
-    rpcUrl,
+const run = async () => {
+  const collectionName = 'User'
+  const params: User = {
+    name: 'Satoshi',
   }
-  await skeetSolTransfer(skeetSolTransferParam)
+  const response = await addCollectionItem<User>(collectionName, params)
+  console.log('Ref', response)
 }
 
-transferSol()
+run()
 ```
 
-### Send SPL Token
+Define Your ID
 
-```javascript
-import { generateIv } from '@/lib/crypto'
-import { genKeypair, getKeypairData } from '@/lib/solanaUtils'
-import {
-  skeetSplTransfer,
-  SkeetSplTransferParam,
-} from '@skeet-framework/api-plugin-solana-transfer'
+```typescript
+import { addCollectionItem } from '@skeet-framework/firestore'
+import { User } from '@/models/userModels.ts'
 
-const queueId = 1 // optional
-// e.g. $EPCT - https://solscan.io/token/CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP
-const TOKEN_MINT_ADDRESS = 'CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP'
-const decimal = 6 // TOKEN_MINT_ADDRESS's decimal
-const fromKeypair = await genKeypair()
-const toKeypair = await genKeypair()
-const keypairData = await getKeypairData(fromKeypair)
-const iv = await generateIv() // decrypt key for worker
-const rpcUrl = 'https://api.mainnet-beta.solana.com/'
-const encodedFromSecretKeyString = await decrypt(
-  keypairData.unit8Array.join(','),
-  iv
-)
-const transferSpl = async () => {
-  const skeetSplTransferParam: SkeetSplTransferParam = {
-    id: queueId,
-    toAddressPubkey: toKeypair.pubkey.toBase58(),
-    tokenMintAddress: TOKEN_MINT_ADDRESS,
-    transferAmountLamport: 1000,
-    encodedFromSecretKeyString,
-    iv: iv.toString('base64'),
-    rpcUrl,
-    decimal,
+const run = async () => {
+  const collectionName = 'User'
+  const params: User = {
+    name: 'Satoshi',
   }
-  await skeetSplTransfer(skeetSolTransferParam)
+  const id = '2023-04-20'
+  const response = await addCollectionItem<User>(collectionName, params, id)
+  console.log('Ref', response)
 }
-transferSpl()
+
+run()
 ```
 
 ## Skeet Document
@@ -136,7 +76,7 @@ transferSpl()
 
 ## Skeet TypeScript Serverless Framework
 
-Nexus Prisma, GraphQL, Relay Connection, ApolloServer with Express, TypeScript, PostgreSQL, Jest Test, Google Cloud Run
+Firestore, Cloud Functions, TypeScript, Jest Test, Google Cloud Load Balancer, Cloud Armor
 
 ## What's Skeet?
 
@@ -145,7 +85,7 @@ TypeScript Serverless Framework 'Skeet'.
 The Skeet project was launched with the goal of reducing software development, operation, and maintenance costs.
 
 Build Serverless Apps faster.
-Powered by TypeScript GraphQL, Prisma, Jest, Prettier, and Google Cloud.
+Powered by TFirestore, Cloud Functions, Typesaurus, Jest, Prettier, and Google Cloud.
 
 ## Dependency
 
@@ -153,16 +93,13 @@ Powered by TypeScript GraphQL, Prisma, Jest, Prettier, and Google Cloud.
 - [Node](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Google SDK](https://cloud.google.com/sdk/docs)
-- [Docker](https://www.docker.com/)
 - [GitHub CLI](https://cli.github.com/)
-- [Git Crypt](https://github.com/AGWA/git-crypt)
+- [Typesaurus](https://typesaurus.com/)
 
 ```bash
-$ npm i -g skeet
+$ npm i -g @skeet-framework/cli
 $ skeet create web-app
 ```
-
-![Skeet Create](https://storage.googleapis.com/skeet-assets/animation/skeet-create-compressed.gif)
 
 ## Contributing
 
@@ -174,4 +111,4 @@ The package is available as open source under the terms of the [Apache-2.0 Licen
 
 ## Code of Conduct
 
-Everyone interacting in the SKEET project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/elsoul/skeet/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the SKEET project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/elsoul/skeet-cli/blob/master/CODE_OF_CONDUCT.md).
