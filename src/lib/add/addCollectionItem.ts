@@ -1,27 +1,23 @@
 import { collection, add, get, upset, Ref } from 'typesaurus'
 import { getTimestamp } from '@/utils/time'
 
-export type AddCollectionItemParams<T> = {
-  collectionName: string
-  body: T
-  id?: string
-}
-
 export const addCollectionItem = async <T>(
-  params: AddCollectionItemParams<T>
+  collectionName: string,
+  params: T,
+  id?: string
 ): Promise<Ref<T>> => {
   try {
-    const mainCollection = collection<T>(params.collectionName)
+    const mainCollection = collection<T>(collectionName)
     const datetimeNow = getTimestamp()
     const data = {
-      ...params.body,
+      ...params,
       createdAt: datetimeNow,
       updatedAt: datetimeNow,
     }
-    if (!params.id) {
+    if (!id) {
       return await add(mainCollection, data)
     } else {
-      const collectionId = params.id || '1'
+      const collectionId = id || '1'
       await upset(mainCollection, collectionId, data)
       const collectionRef = await get(mainCollection, collectionId)
       if (!collectionRef) throw new Error('collectionRef is undefined')

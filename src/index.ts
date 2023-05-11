@@ -9,6 +9,7 @@ import {
   isItemExists,
   isChildItemExists,
 } from '@/lib'
+import { collection, add, get, upset, Ref } from 'typesaurus'
 import * as dotenv from 'dotenv'
 dotenv.config()
 
@@ -22,4 +23,9 @@ export {
   getGrandChildCollectionItems,
   isItemExists,
   isChildItemExists,
+  Ref,
+  collection,
+  add,
+  get,
+  upset,
 }
