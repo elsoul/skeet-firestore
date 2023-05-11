@@ -26,7 +26,13 @@
 ## Install
 
 ```bash
-$ skeet add yarn -p @skeet-framework/firestore
+$ skeet yarn add -p @skeet-framework/firestore
+```
+
+or
+
+```bash
+$ yarn add @skeet-framework/firestore
 ```
 
 ## Usage
