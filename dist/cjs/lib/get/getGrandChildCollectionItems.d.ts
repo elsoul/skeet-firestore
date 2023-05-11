@@ -1,0 +1,1 @@
+export declare const getGrandChildCollectionItems: <GrandChild, Child, Parent>(parentCollectionName: string, childCollectionName: string, grandChildCollectionName: string, parentId: string, childCollectionId: string) => Promise<GrandChild[]>;

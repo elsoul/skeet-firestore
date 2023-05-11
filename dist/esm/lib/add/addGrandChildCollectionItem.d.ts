@@ -1,0 +1,1 @@
+export declare const addGrandChildCollectionItem: <GrandChild, Child, Parent>(parentCollectionName: string, childCollectionName: string, grandChildCollectionName: string, parentId: string, childId: string, params: GrandChild, id?: string) => Promise<import("typesaurus").Ref<GrandChild>>;

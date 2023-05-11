@@ -1,0 +1,62 @@
+{
+  "name": "@skeet-framework/firestore",
+  "version": "0.0.1",
+  "description": "Skeet Framework Plugin - Firestore",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elsoul/skeet-firestore.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Serverless",
+    "Web3js",
+    "Skeet Plugin",
+    "Solana"
+  ],
+  "author": "ELSOUL LABO B.V.",
+  "license": "Apache-2.0",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/elsoul/skeet-firestore/issues"
+  },
+  "homepage": "https://skeet.dev",
+  "scripts": {
+    "test": "jest --coverage=false --detectOpenHandles --maxWorkers=1",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -b tsconfig.cjs.json",
+    "build:esm": "tsc -b tsconfig.esm.json",
+    "build-doc": "typedoc src/index.ts --out tsdocs",
+    "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
+    "publish": "yarn build && npm publish",
+    "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "date-fns": "2.30.0",
+    "date-fns-tz": "2.0.0",
+    "dotenv": "16.0.3",
+    "firebase-admin": "11.8.0",
+    "jest": "29.4.3",
+    "node-fetch": "2.6.7",
+    "typesaurus": "7"
+  },
+  "devDependencies": {
+    "@types/jest": "29.2.5",
+    "@types/node": "18.11.9",
+    "@types/node-fetch": "2.6.2",
+    "babel-loader": "9.1.2",
+    "esbuild": "0.17.7",
+    "eslint": "8.27.0",
+    "eslint-config-prettier": "8.5.0",
+    "npm-check-updates": "16.4.1",
+    "prettier": "2.7.1",
+    "ts-jest": "29.0.5",
+    "ts-loader": "9.4.2",
+    "ts-node": "10.9.1",
+    "tsconfig-paths": "4.1.2",
+    "typedoc": "0.23.26",
+    "typescript": "5.0.4"
+  }
+}
