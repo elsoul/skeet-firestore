@@ -10,11 +10,11 @@ const queryGrandGrandChildCollectionItem = async (parentCollectionName, childCol
         const grandGrandChildCollection = (0, typesaurus_1.subcollection)(grandGrandChildCollectionName, grandChildCollection(childCollectionId));
         const data = await (0, typesaurus_1.query)(grandGrandChildCollection(grandChildCollectionId), queries);
         if (data.length === 0)
-            throw new Error(`no data found for ${grandChildCollectionName}`);
+            throw new Error(`no data found for ${grandGrandChildCollectionName}`);
         return data;
     }
     catch (error) {
-        throw new Error(`getGrandGrandChildCollectionItem: ${error}`);
+        throw new Error(`queryGrandGrandChildCollectionItem: ${error}`);
     }
 };
 exports.queryGrandGrandChildCollectionItem = queryGrandGrandChildCollectionItem;

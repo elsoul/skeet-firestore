@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isChildItemExists = exports.isItemExists = exports.queryGrandGrandChildCollectionItem = exports.queryGrandChildCollectionItem = exports.queryChildCollectionItem = exports.queryCollectionItem = exports.getGrandGrandChildCollectionItem = exports.getGrandChildCollectionItems = exports.getGrandChildCollectionItem = exports.getChildCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
+exports.isChildItemExists = exports.isItemExists = exports.queryGrandGrandGrandChildCollectionItem = exports.queryGrandGrandChildCollectionItem = exports.queryGrandChildCollectionItem = exports.queryChildCollectionItem = exports.queryCollectionItem = exports.getGrandGrandGrandChildCollectionItem = exports.getGrandGrandChildCollectionItem = exports.getGrandChildCollectionItem = exports.getChildCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
 const lib_1 = require("./lib");
 Object.defineProperty(exports, "addCollectionItem", { enumerable: true, get: function () { return lib_1.addCollectionItem; } });
 Object.defineProperty(exports, "addChildCollectionItem", { enumerable: true, get: function () { return lib_1.addChildCollectionItem; } });
@@ -9,12 +9,13 @@ Object.defineProperty(exports, "addGrandGrandChildCollectionItem", { enumerable:
 Object.defineProperty(exports, "addGrandGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.addGrandGrandGrandChildCollectionItem; } });
 Object.defineProperty(exports, "getChildCollectionItem", { enumerable: true, get: function () { return lib_1.getChildCollectionItem; } });
 Object.defineProperty(exports, "getGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.getGrandChildCollectionItem; } });
-Object.defineProperty(exports, "getGrandChildCollectionItems", { enumerable: true, get: function () { return lib_1.getGrandChildCollectionItems; } });
 Object.defineProperty(exports, "getGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.getGrandGrandChildCollectionItem; } });
+Object.defineProperty(exports, "getGrandGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.getGrandGrandGrandChildCollectionItem; } });
 Object.defineProperty(exports, "queryCollectionItem", { enumerable: true, get: function () { return lib_1.queryCollectionItem; } });
 Object.defineProperty(exports, "queryChildCollectionItem", { enumerable: true, get: function () { return lib_1.queryChildCollectionItem; } });
 Object.defineProperty(exports, "queryGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.queryGrandChildCollectionItem; } });
 Object.defineProperty(exports, "queryGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.queryGrandGrandChildCollectionItem; } });
+Object.defineProperty(exports, "queryGrandGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.queryGrandGrandGrandChildCollectionItem; } });
 Object.defineProperty(exports, "isItemExists", { enumerable: true, get: function () { return lib_1.isItemExists; } });
 Object.defineProperty(exports, "isChildItemExists", { enumerable: true, get: function () { return lib_1.isChildItemExists; } });
 //# sourceMappingURL=index.js.map

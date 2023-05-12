@@ -18,4 +18,5 @@ __exportStar(require("./queryCollectionItem"), exports);
 __exportStar(require("./queryChildCollectionItem"), exports);
 __exportStar(require("./queryGrandChildCollectionItem"), exports);
 __exportStar(require("./queryGrandGrandChildCollectionItem"), exports);
+__exportStar(require("./queryGrandGrandGrandChildCollectionItem"), exports);
 //# sourceMappingURL=index.js.map

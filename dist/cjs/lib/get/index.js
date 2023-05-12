@@ -18,5 +18,5 @@ __exportStar(require("./getCollectionItem"), exports);
 __exportStar(require("./getChildCollectionItem"), exports);
 __exportStar(require("./getGrandChildCollectionItem"), exports);
 __exportStar(require("./getGrandGrandChildCollectionItem"), exports);
-__exportStar(require("./getGrandChildCollectionItems"), exports);
+__exportStar(require("./getGrandGrandGrandChildCollectionItem"), exports);
 //# sourceMappingURL=index.js.map

@@ -34,10 +34,10 @@ export const queryGrandGrandChildCollectionItem = async <
       queries
     )
     if (data.length === 0)
-      throw new Error(`no data found for ${grandChildCollectionName}`)
+      throw new Error(`no data found for ${grandGrandChildCollectionName}`)
 
     return data
   } catch (error) {
-    throw new Error(`getGrandGrandChildCollectionItem: ${error}`)
+    throw new Error(`queryGrandGrandChildCollectionItem: ${error}`)
   }
 }

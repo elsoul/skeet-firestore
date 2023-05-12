@@ -7,11 +7,11 @@ export const queryGrandGrandChildCollectionItem = async (parentCollectionName, c
         const grandGrandChildCollection = subcollection(grandGrandChildCollectionName, grandChildCollection(childCollectionId));
         const data = await query(grandGrandChildCollection(grandChildCollectionId), queries);
         if (data.length === 0)
-            throw new Error(`no data found for ${grandChildCollectionName}`);
+            throw new Error(`no data found for ${grandGrandChildCollectionName}`);
         return data;
     }
     catch (error) {
-        throw new Error(`getGrandGrandChildCollectionItem: ${error}`);
+        throw new Error(`queryGrandGrandChildCollectionItem: ${error}`);
     }
 };
 //# sourceMappingURL=queryGrandGrandChildCollectionItem.js.map
