@@ -1,5 +1,5 @@
 import { collection, add, get, upset, Ref } from 'typesaurus'
-import { getTimestamp } from '@/utils/time'
+import { getTimestamp } from '../../utils/time'
 
 export const addCollectionItem = async <T>(
   collectionName: string,

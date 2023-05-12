@@ -1,5 +1,5 @@
 import { add, collection, get, set, subcollection } from 'typesaurus';
-import { getTimestamp } from '@/utils/time';
+import { getTimestamp } from '../../utils/time';
 export const addChildCollectionItem = async (parentCollectionName, childCollectionName, parentId, params, id) => {
     try {
         const parentCollection = collection(parentCollectionName);

@@ -24,7 +24,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addCollectionItem = exports.upset = exports.get = exports.add = exports.collection = exports.isChildItemExists = exports.isItemExists = exports.getGrandChildCollectionItems = exports.getChildCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = void 0;
-const lib_1 = require("@/lib");
+const lib_1 = require("./lib");
 Object.defineProperty(exports, "addChildCollectionItem", { enumerable: true, get: function () { return lib_1.addChildCollectionItem; } });
 Object.defineProperty(exports, "addGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.addGrandChildCollectionItem; } });
 Object.defineProperty(exports, "addGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.addGrandGrandChildCollectionItem; } });

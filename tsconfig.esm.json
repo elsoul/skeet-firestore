@@ -3,6 +3,11 @@
   "compilerOptions": {
     "module": "esnext",
     "outDir": "dist/esm",
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }

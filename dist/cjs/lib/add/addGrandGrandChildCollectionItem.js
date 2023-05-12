@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addGrandGrandChildCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const time_1 = require("@/utils/time");
+const time_1 = require("../../utils/time");
 const addGrandGrandChildCollectionItem = async (parentCollectionName, childCollectionName, grandChildCollectionName, grandGrandChildCollectionName, parentId, childId, grandChildId, params, id) => {
     try {
         const parentCollection = (0, typesaurus_1.collection)(parentCollectionName);

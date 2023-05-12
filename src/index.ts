@@ -7,7 +7,7 @@ import {
   getGrandChildCollectionItems,
   isItemExists,
   isChildItemExists,
-} from '@/lib'
+} from './lib'
 import { collection, add, get, upset, Ref } from 'typesaurus'
 import * as dotenv from 'dotenv'
 dotenv.config()
