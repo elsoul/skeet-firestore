@@ -1,26 +1,25 @@
-import { collection, subcollection, ref, get } from 'typesaurus'
+import { collection, subcollection, get } from 'typesaurus'
 
 export const getChildCollectionItem = async <Child, Parent>(
   parentCollectionName: string,
   childCollectionName: string,
   parentId: string,
-  childCollectionId: string,
-  isRef = true
+  childCollectionId: string
 ) => {
   try {
     const parentCollection = collection<Parent>(parentCollectionName)
-    const subCollection = subcollection<Child, Parent>(
+    const childCollection = subcollection<Child, Parent>(
       childCollectionName,
       parentCollection
     )
-    const parentRef = ref(parentCollection, parentId)
-    const subCollectionRef = ref(subCollection(parentRef), childCollectionId)
-    const subCollectionDoc = await get(
-      subCollection(parentId),
+    const childCollectionItem = await get(
+      childCollection(parentId),
       childCollectionId
     )
-    if (isRef) return subCollectionRef
-    return subCollectionDoc
+    if (!childCollectionItem)
+      throw new Error('childCollectionItem is undefined')
+
+    return childCollectionItem
   } catch (error) {
     throw new Error(`getChildCollectionItem: ${error}`)
   }
