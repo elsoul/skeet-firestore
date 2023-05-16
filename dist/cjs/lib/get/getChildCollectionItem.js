@@ -8,7 +8,7 @@ const getChildCollectionItem = async (parentCollectionName, childCollectionName,
         const childCollection = (0, typesaurus_1.subcollection)(childCollectionName, parentCollection);
         const childCollectionItem = await (0, typesaurus_1.get)(childCollection(parentId), childCollectionId);
         if (!childCollectionItem)
-            throw new Error('childCollectionItem is undefined');
+            throw new Error(`${childCollectionName} is undefined`);
         return childCollectionItem;
     }
     catch (error) {

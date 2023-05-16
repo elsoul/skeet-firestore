@@ -4,7 +4,7 @@ export const queryChildCollectionItem = async <Child, Parent>(
   parentCollectionName: string,
   childCollectionName: string,
   parentId: string,
-  queries: Query<Parent, keyof Parent>[]
+  queries: Query<Child, keyof Child>[]
 ) => {
   try {
     const parentCollection = collection<Parent>(parentCollectionName)

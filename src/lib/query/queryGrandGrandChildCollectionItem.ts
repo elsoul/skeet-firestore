@@ -13,7 +13,7 @@ export const queryGrandGrandChildCollectionItem = async <
   parentId: string,
   childCollectionId: string,
   grandChildCollectionId: string,
-  queries: Query<Parent, keyof Parent>[]
+  queries: Query<GrandGrandChild, keyof GrandGrandChild>[]
 ) => {
   try {
     const parentCollection = collection<Parent>(parentCollectionName)

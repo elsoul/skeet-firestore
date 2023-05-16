@@ -5,7 +5,7 @@ export const getChildCollectionItem = async (parentCollectionName, childCollecti
         const childCollection = subcollection(childCollectionName, parentCollection);
         const childCollectionItem = await get(childCollection(parentId), childCollectionId);
         if (!childCollectionItem)
-            throw new Error('childCollectionItem is undefined');
+            throw new Error(`${childCollectionName} is undefined`);
         return childCollectionItem;
     }
     catch (error) {

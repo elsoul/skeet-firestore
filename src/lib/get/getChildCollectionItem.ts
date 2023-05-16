@@ -17,7 +17,7 @@ export const getChildCollectionItem = async <Child, Parent>(
       childCollectionId
     )
     if (!childCollectionItem)
-      throw new Error('childCollectionItem is undefined')
+      throw new Error(`${childCollectionName} is undefined`)
 
     return childCollectionItem
   } catch (error) {
