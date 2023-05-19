@@ -33,13 +33,13 @@ Skeet Firestore Plugin for CRUD Firestore operation with Typesaurus.
 
 There are 5 actions in the Skeet Firestore plugin.
 
-| Function Name        | Description                          |
-| -------------------- | ------------------------------------ |
-| addCollectionItem    | Add Collection Item                  |
-| getCollectionItem    | Get Collection Item                  |
-| queryCollectionItem  | Query Collection Items               |
-| updateCollectionItem | Update Collection Item               |
-| removeCollectionItem | Remove Collection Item (coming soon) |
+| Function Name        | Description            |
+| -------------------- | ---------------------- |
+| addCollectionItem    | Add Collection Item    |
+| getCollectionItem    | Get Collection Item    |
+| queryCollectionItem  | Query Collection Items |
+| updateCollectionItem | Update Collection Item |
+| removeCollectionItem | Remove Collection Item |
 
 Nested Document and Collection are supported.
 
