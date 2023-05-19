@@ -21,6 +21,10 @@
   </a>
 </p>
 
+# Skeet Firestore Docs
+
+- [https://skeet.dev/doc/backend/skeet-firestore/](https://skeet.dev/doc/backend/skeet-firestore/)
+
 # Skeet Framework Plugin - Firestore
 
 Skeet Firestore Plugin for CRUD Firestore operation with Typesaurus.
