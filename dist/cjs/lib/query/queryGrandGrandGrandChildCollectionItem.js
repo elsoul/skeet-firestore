@@ -15,7 +15,7 @@ const queryGrandGrandGrandChildCollectionItem = async (parentCollectionName, chi
         return data;
     }
     catch (error) {
-        throw new Error(`queryGrandGrandGrandChildCollectionItem: ${error}`);
+        throw new Error(`queryGrandGrandGrandChildCollectionItem(${grandGrandGrandChildCollectionName}): ${error}`);
     }
 };
 exports.queryGrandGrandGrandChildCollectionItem = queryGrandGrandGrandChildCollectionItem;

@@ -1,5 +1,4 @@
-import { tr } from 'date-fns/locale'
-import { collection, subcollection, get, remove } from 'typesaurus'
+import { collection, subcollection, remove } from 'typesaurus'
 
 export const removeGrandGrandGrandChildCollectionItem = async <
   GrandGrandGrandChild,

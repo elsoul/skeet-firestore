@@ -1,5 +1,5 @@
 import { add, collection, subcollection, set, get } from 'typesaurus';
-import { getTimestamp } from '../../utils/time';
+import { getTimestamp } from '@/utils/time';
 export const addGrandChildCollectionItem = async (parentCollectionName, childCollectionName, grandChildCollectionName, parentId, childId, params, id) => {
     try {
         const parentCollection = collection(parentCollectionName);
@@ -18,14 +18,14 @@ export const addGrandChildCollectionItem = async (parentCollectionName, childCol
         else {
             const collectionId = id || '1';
             await set(body, collectionId, data);
-            const collectionRef = await get(body, collectionId);
-            if (!collectionRef)
-                throw new Error('collectionRef is undefined');
-            return collectionRef.ref;
+            const doc = await get(body, collectionId);
+            if (!doc)
+                throw new Error('doc is undefined');
+            return doc.ref;
         }
     }
     catch (error) {
-        throw new Error(`addSubcollectionItem: ${error}`);
+        throw new Error(`addGrandChildCollectionItem(${grandChildCollectionName}): ${error}`);
     }
 };
 //# sourceMappingURL=addGrandChildCollectionItem.js.map

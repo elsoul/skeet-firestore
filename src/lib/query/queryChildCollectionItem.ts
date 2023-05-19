@@ -18,6 +18,8 @@ export const queryChildCollectionItem = async <Child, Parent>(
 
     return data
   } catch (error) {
-    throw new Error(`queryChildCollectionItem: ${error}`)
+    throw new Error(
+      `queryChildCollectionItem(${childCollectionName}): ${error}`
+    )
   }
 }

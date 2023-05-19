@@ -18,4 +18,5 @@ __exportStar(require("./add"), exports);
 __exportStar(require("./get"), exports);
 __exportStar(require("./update"), exports);
 __exportStar(require("./query"), exports);
+__exportStar(require("./remove"), exports);
 //# sourceMappingURL=index.js.map

@@ -12,7 +12,7 @@ const queryChildCollectionItem = async (parentCollectionName, childCollectionNam
         return data;
     }
     catch (error) {
-        throw new Error(`queryChildCollectionItem: ${error}`);
+        throw new Error(`queryChildCollectionItem(${childCollectionName}): ${error}`);
     }
 };
 exports.queryChildCollectionItem = queryChildCollectionItem;

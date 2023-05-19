@@ -1,26 +1,3 @@
-import {
-  addCollectionItem,
-  addChildCollectionItem,
-  addGrandChildCollectionItem,
-  addGrandGrandChildCollectionItem,
-  addGrandGrandGrandChildCollectionItem,
-  getCollectionItem,
-  getChildCollectionItem,
-  getGrandChildCollectionItem,
-  getGrandGrandChildCollectionItem,
-  getGrandGrandGrandChildCollectionItem,
-  updateCollectionItem,
-  updateChildCollectionItem,
-  updateGrandChildCollectionItem,
-  updateGrandGrandChildCollectionItem,
-  updateGrandGrandGrandChildCollectionItem,
-  queryCollectionItem,
-  queryChildCollectionItem,
-  queryGrandChildCollectionItem,
-  queryGrandGrandChildCollectionItem,
-  queryGrandGrandGrandChildCollectionItem,
-} from './lib'
-
 export {
   addCollectionItem,
   addChildCollectionItem,
@@ -42,4 +19,9 @@ export {
   queryGrandChildCollectionItem,
   queryGrandGrandChildCollectionItem,
   queryGrandGrandGrandChildCollectionItem,
-}
+  removeCollectionItem,
+  removeChildCollectionItem,
+  removeGrandChildCollectionItem,
+  removeGrandGrandChildCollectionItem,
+  removeGrandGrandGrandChildCollectionItem,
+} from '@/lib'

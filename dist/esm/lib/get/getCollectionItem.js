@@ -8,7 +8,7 @@ export const getCollectionItem = async (parentCollectionName, parentId) => {
         return parentCollectionItem;
     }
     catch (error) {
-        throw new Error(`getCollectionItem: ${error}`);
+        throw new Error(`getCollectionItem(${parentCollectionName}): ${error}`);
     }
 };
 //# sourceMappingURL=getCollectionItem.js.map

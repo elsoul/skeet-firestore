@@ -24,6 +24,8 @@ export const queryGrandChildCollectionItem = async <GrandChild, Child, Parent>(
 
     return data
   } catch (error) {
-    throw new Error(`queryGrandChildCollectionItem: ${error}`)
+    throw new Error(
+      `queryGrandChildCollectionItem(${grandChildCollectionName}): ${error}`
+    )
   }
 }

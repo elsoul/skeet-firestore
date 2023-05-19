@@ -1,1 +1,1 @@
-export declare const updateGrandChildCollectionItem: <GrandChild, Child, Parent>(parentCollectionName: string, childCollectionName: string, grandChildCollectionName: string, parentId: string, childId: string, grandChildId: string, params: Partial<GrandChild>) => Promise<void>;
+export declare const updateGrandChildCollectionItem: <GrandChild, Child, Parent>(parentCollectionName: string, childCollectionName: string, grandChildCollectionName: string, parentId: string, childId: string, grandChildId: string, params: Partial<GrandChild>) => Promise<boolean>;

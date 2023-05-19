@@ -39,6 +39,8 @@ export const getGrandGrandChildCollectionItem = async <
 
     return grandGrandChildCollectionItem
   } catch (error) {
-    throw new Error(`getGrandGrandChildCollectionItem: ${error}`)
+    throw new Error(
+      `getGrandGrandChildCollectionItem(${grandGrandChildCollectionName}): ${error}`
+    )
   }
 }

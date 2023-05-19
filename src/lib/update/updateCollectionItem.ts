@@ -1,5 +1,5 @@
 import { collection, update } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { getTimestamp } from '@/utils/time'
 
 export const updateCollectionItem = async <T>(
   collectionName: string,
@@ -13,7 +13,8 @@ export const updateCollectionItem = async <T>(
       updatedAt: getTimestamp(),
     }
     await update(mainCollection, collectionId, data)
+    return true
   } catch (error) {
-    throw new Error(`addCollectionItem: ${error}`)
+    throw new Error(`updateCollectionItem(${collectionName}): ${error}`)
   }
 }

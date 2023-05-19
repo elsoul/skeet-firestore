@@ -1,5 +1,5 @@
 import { collection, subcollection, update } from 'typesaurus';
-import { getTimestamp } from '../../utils/time';
+import { getTimestamp } from '@/utils/time';
 export const updateChildCollectionItem = async (parentCollectionName, childCollectionName, parentId, childId, params) => {
     try {
         const parentCollection = collection(parentCollectionName);
@@ -12,7 +12,7 @@ export const updateChildCollectionItem = async (parentCollectionName, childColle
         return true;
     }
     catch (error) {
-        throw new Error(`updateChildCollectionItem: ${error}`);
+        throw new Error(`updateChildCollectionItem(${childCollectionName}): ${error}`);
     }
 };
 //# sourceMappingURL=updateChildCollectionItem.js.map

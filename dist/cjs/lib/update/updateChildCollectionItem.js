@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateChildCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const time_1 = require("../../utils/time");
+const time_1 = require("@/utils/time");
 const updateChildCollectionItem = async (parentCollectionName, childCollectionName, parentId, childId, params) => {
     try {
         const parentCollection = (0, typesaurus_1.collection)(parentCollectionName);
@@ -15,7 +15,7 @@ const updateChildCollectionItem = async (parentCollectionName, childCollectionNa
         return true;
     }
     catch (error) {
-        throw new Error(`updateChildCollectionItem: ${error}`);
+        throw new Error(`updateChildCollectionItem(${childCollectionName}): ${error}`);
     }
 };
 exports.updateChildCollectionItem = updateChildCollectionItem;

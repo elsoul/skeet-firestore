@@ -39,15 +39,15 @@ There are 5 actions in the Skeet Firestore plugin.
 | getCollectionItem    | Get Collection Item                  |
 | queryCollectionItem  | Query Collection Items               |
 | updateCollectionItem | Update Collection Item               |
-| deleteCollectionItem | Delete Collection Item (coming soon) |
+| removeCollectionItem | Remove Collection Item (coming soon) |
 
 Nested Document and Collection are supported.
 
-- Add/Get/Query/Update/Delete Collection Item
-- Add/Get/Query/Update/Delete Child Collection Item
-- Add/Get/Query/Update/Delete Grand Child Collection Item
-- Add/Get/Query/Update/Delete Great Grand Child Collection Item
-- Add/Get/Query/Update/Delete Great Great Grand Child Collection Item
+- Add/Get/Query/Update/Remove Collection Item
+- Add/Get/Query/Update/Remove Child Collection Item
+- Add/Get/Query/Update/Remove Grand Child Collection Item
+- Add/Get/Query/Update/Remove Great Grand Child Collection Item
+- Add/Get/Query/Update/Remove Great Great Grand Child Collection Item
 
 Available functions for Nested Tree.
 
@@ -69,6 +69,10 @@ Available functions for Nested Tree.
 | updateGrandChildCollectionItem           | Update Grand Child Collection Item             |
 | updateGrandGrandChildCollectionItem      | Update Grand Grand Child Collection Item       |
 | updateGreatGrandGrandChildCollectionItem | Update Great Grand Grand Child Collection Item |
+| removeChildCollectionItem                | Remove Child Collection Item                   |
+| removeGrandChildCollectionItem           | Remove Grand Child Collection Item             |
+| removeGrandGrandChildCollectionItem      | Remove Grand Grand Child Collection Item       |
+| removeGreatGrandGrandChildCollectionItem | Remove Great Grand Grand Child Collection Item |
 
 ## Install
 
@@ -84,12 +88,31 @@ $ yarn add @skeet-framework/firestore
 
 ## Usage
 
+### Initialize
+
+```typescript
+import * as admin from 'firebase-admin'
+
+admin.initializeApp()
+```
+
+or
+
+```typescript
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
+
+firebase.initializeApp({
+  // Project configuration
+})
+```
+
 ### Example Model
 
 ```typescript
 import { Ref } from 'typesaurus'
 
-// CollectionId: auto
+// CollectionId: User
 // DocumentId: uid
 export type User = {
   uid?: string
@@ -100,7 +123,7 @@ export type User = {
   updatedAt?: string
 }
 
-// CollectionId: auto
+// CollectionId: UserChatRoom
 // DocumentId: auto
 export type UserChatRoom = {
   userRef: Ref<User>
@@ -112,7 +135,7 @@ export type UserChatRoom = {
   updatedAt?: string
 }
 
-// CollectionId: auto
+// CollectionId: UserChatRoomMessage
 // DocumentId: auto
 export type UserChatRoomMessage = {
   userChatRoomRef: Ref<UserChatRoom>

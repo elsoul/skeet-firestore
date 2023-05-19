@@ -1,5 +1,5 @@
 import { collection, subcollection, update } from 'typesaurus';
-import { getTimestamp } from '../../utils/time';
+import { getTimestamp } from '@/utils/time';
 export const updateGrandGrandGrandChildCollectionItem = async (parentCollectionName, childCollectionName, grandChildCollectionName, grandGrandChildCollectionName, grandGrandGrandChildCollectionName, parentId, childId, grandChildId, grandGrandChildId, grandGrandGrandChildId, params) => {
     try {
         const parentCollection = collection(parentCollectionName);
@@ -12,9 +12,10 @@ export const updateGrandGrandGrandChildCollectionItem = async (parentCollectionN
             updatedAt: getTimestamp(),
         };
         await update(grandGrandGrandChildCollection(grandGrandChildId), grandGrandGrandChildId, data);
+        return true;
     }
     catch (error) {
-        throw new Error(`addGrandGrandGrandChildCollectionItem: ${error}`);
+        throw new Error(`updateGrandGrandGrandChildCollectionItem(${grandGrandChildCollectionName}): ${error}`);
     }
 };
 //# sourceMappingURL=updateGrandGrandGrandChildCollectionItem.js.map

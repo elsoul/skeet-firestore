@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addChildCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const time_1 = require("../../utils/time");
+const time_1 = require("@/utils/time");
 const addChildCollectionItem = async (parentCollectionName, childCollectionName, parentId, params, id) => {
     try {
         const parentCollection = (0, typesaurus_1.collection)(parentCollectionName);
@@ -20,14 +20,14 @@ const addChildCollectionItem = async (parentCollectionName, childCollectionName,
         else {
             const collectionId = id || '1';
             await (0, typesaurus_1.set)(body, collectionId, data);
-            const collectionRef = await (0, typesaurus_1.get)(body, collectionId);
-            if (!collectionRef)
-                throw new Error('collectionRef is undefined');
-            return collectionRef.ref;
+            const doc = await (0, typesaurus_1.get)(body, collectionId);
+            if (!doc)
+                throw new Error('doc is undefined');
+            return doc.ref;
         }
     }
     catch (error) {
-        throw new Error(`addSubcollectionItem: ${error}`);
+        throw new Error(`addChildCollectionItem(${childCollectionName}): ${error}`);
     }
 };
 exports.addChildCollectionItem = addChildCollectionItem;

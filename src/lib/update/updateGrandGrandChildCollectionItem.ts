@@ -1,5 +1,5 @@
-import { add, collection, subcollection, set, get, update } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { collection, subcollection, update } from 'typesaurus'
+import { getTimestamp } from '@/utils/time'
 
 export const updateGrandGrandChildCollectionItem = async <
   GrandGrandChild,
@@ -40,7 +40,10 @@ export const updateGrandGrandChildCollectionItem = async <
       grandGrandChildId,
       data
     )
+    return true
   } catch (error) {
-    throw new Error(`updateGrandGrandChildCollectionItem: ${error}`)
+    throw new Error(
+      `updateGrandGrandChildCollectionItem(${grandGrandChildCollectionName}): ${error}`
+    )
   }
 }

@@ -1,5 +1,5 @@
 import { collection, add, get, upset, Ref } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { getTimestamp } from '@/utils/time'
 
 export const addCollectionItem = async <T>(
   collectionName: string,
@@ -19,11 +19,11 @@ export const addCollectionItem = async <T>(
     } else {
       const collectionId = id || '1'
       await upset(mainCollection, collectionId, data)
-      const collectionRef = await get(mainCollection, collectionId)
-      if (!collectionRef) throw new Error('collectionRef is undefined')
-      return collectionRef.ref
+      const doc = await get(mainCollection, collectionId)
+      if (!doc) throw new Error('doc is undefined')
+      return doc.ref
     }
   } catch (error) {
-    throw new Error(`addCollectionItem: ${error}`)
+    throw new Error(`addCollectionItem(${collectionName}): ${error}`)
   }
 }

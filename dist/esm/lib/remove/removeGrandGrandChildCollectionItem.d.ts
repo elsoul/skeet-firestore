@@ -1,0 +1,1 @@
+export declare const removeGrandGrandChildCollectionItem: <GrandGrandChild, GrandChild, Child, Parent>(parentCollectionName: string, childCollectionName: string, grandChildCollectionName: string, grandGrandChildCollectionName: string, parentId: string, childCollectionId: string, grandChildCollectionId: string, grandGrandChildCollectionId: string) => Promise<boolean>;
