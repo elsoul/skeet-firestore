@@ -19,8 +19,6 @@ import {
   queryGrandChildCollectionItem,
   queryGrandGrandChildCollectionItem,
   queryGrandGrandGrandChildCollectionItem,
-  isItemExists,
-  isChildItemExists,
 } from './lib'
 
 export {
@@ -44,6 +42,4 @@ export {
   queryGrandChildCollectionItem,
   queryGrandGrandChildCollectionItem,
   queryGrandGrandGrandChildCollectionItem,
-  isItemExists,
-  isChildItemExists,
 }
