@@ -1,5 +1,5 @@
 import { collection, subcollection, update } from 'typesaurus'
-import { getTimestamp } from '@/utils/time'
+import { getTimestamp } from '../../utils/time'
 
 export const updateChildCollectionItem = async <Child, Parent>(
   parentCollectionName: string,

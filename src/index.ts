@@ -24,4 +24,4 @@ export {
   removeGrandChildCollectionItem,
   removeGrandGrandChildCollectionItem,
   removeGrandGrandGrandChildCollectionItem,
-} from '@/lib'
+} from './lib'

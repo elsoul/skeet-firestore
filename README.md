@@ -146,6 +146,30 @@ export type UserChatRoomMessage = {
 }
 ```
 
+## Basic Structure of Skeet Firestore
+
+Skeet Firestore retrieves, updates, and removes data nested in the following structure:
+
+```typescript
+const parentCollectionName = 'Parent'
+const childCollectionName = 'Child'
+const grandChildCollectionName = 'GrandChild'
+.
+.
+.
+
+const doc = await {MethodName}{Relation}CollectionItem<..., GrandChild, Child, Parent>(
+  parentCollectionName,
+  childCollectionName,
+  grandChildCollectionName,
+  ...,
+  parentId,
+  childId,
+  ...,
+  {Relation}Params
+  )
+```
+
 ### Create Single Collection/Document
 
 Autogenerate ID String

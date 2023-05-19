@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const time_1 = require("@/utils/time");
+const time_1 = require("../../utils/time");
 const updateCollectionItem = async (collectionName, collectionId, params) => {
     try {
         const mainCollection = (0, typesaurus_1.collection)(collectionName);

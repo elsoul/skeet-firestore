@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.removeGrandGrandGrandChildCollectionItem = exports.removeGrandGrandChildCollectionItem = exports.removeGrandChildCollectionItem = exports.removeChildCollectionItem = exports.removeCollectionItem = exports.queryGrandGrandGrandChildCollectionItem = exports.queryGrandGrandChildCollectionItem = exports.queryGrandChildCollectionItem = exports.queryChildCollectionItem = exports.queryCollectionItem = exports.updateGrandGrandGrandChildCollectionItem = exports.updateGrandGrandChildCollectionItem = exports.updateGrandChildCollectionItem = exports.updateChildCollectionItem = exports.updateCollectionItem = exports.getGrandGrandGrandChildCollectionItem = exports.getGrandGrandChildCollectionItem = exports.getGrandChildCollectionItem = exports.getChildCollectionItem = exports.getCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
-var lib_1 = require("@/lib");
+var lib_1 = require("./lib");
 Object.defineProperty(exports, "addCollectionItem", { enumerable: true, get: function () { return lib_1.addCollectionItem; } });
 Object.defineProperty(exports, "addChildCollectionItem", { enumerable: true, get: function () { return lib_1.addChildCollectionItem; } });
 Object.defineProperty(exports, "addGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.addGrandChildCollectionItem; } });
