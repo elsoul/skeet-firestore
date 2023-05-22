@@ -21,13 +21,27 @@
   </a>
 </p>
 
+# Skeet Framework Plugin - Firestore
+
+Skeet Firestore Plugin for CRUD Firestore operation with Typesaurus.
+
+# Installation
+
+```bash
+$ skeet yarn add -p @skeet-framework/firestore
+```
+
+or
+
+```bash
+$ yarn add @skeet-framework/firestore
+```
+
 # Skeet Firestore Docs
 
 - [https://skeet.dev/doc/backend/skeet-firestore/](https://skeet.dev/doc/backend/skeet-firestore/)
 
-# Skeet Framework Plugin - Firestore
-
-Skeet Firestore Plugin for CRUD Firestore operation with Typesaurus.
+- [Skeet Firestore TypeDoc](https://elsoul.github.io/skeet-firestore/)
 
 ## Features
 
@@ -170,7 +184,7 @@ const doc = await {MethodName}{Relation}CollectionItem<..., GrandChild, Child, P
   )
 ```
 
-### Create Single Collection/Document
+### Add Single Collection/Document
 
 Autogenerate ID String
 
@@ -183,8 +197,8 @@ const run = async () => {
   const params: User = {
     username: 'Satoshi',
   }
-  const response = await addCollectionItem<User>(parentCollectionName, params)
-  console.log('Ref', response)
+  const docRef = await addCollectionItem<User>(parentCollectionName, params)
+  console.log('User', docRef)
 }
 
 run()
@@ -221,13 +235,15 @@ import { User, UserChatRoom } from '@/models/userModels.ts'
 
 const run = async () => {
   const parentCollectionName = 'User'
+  const childCollectionName = 'UserChatRoom'
+
   const params: User = {
     username: 'Satoshi',
   }
-  const response = await addCollectionItem<User>(parentCollectionName, params)
-  console.log('Ref', response)
+  const parentDocRef = await addCollectionItem<User>(parentCollectionName, params)
+  console.log(parentCollectionName, parentDocRef)
 
-  const childCollectionName = 'UserChatRoom'
+
   const childParams: UserChatRoom = {
     userRef: response.ref,
     model: 'gpt4',
@@ -235,19 +251,21 @@ const run = async () => {
     temperature: 0.8,
     stream: false,
   }
-  const childResponse = await addChildCollectionItem<UserChatRoom>(
+  const childDocRef = await addChildCollectionItem<UserChatRoom, User>(
     parentCollectionName,
-    response.id,
     childCollectionName,
+    parentDocRef.id
     childParams
   )
-  console.log('Ref', childResponse)
+  console.log(childCollectionName, childDocRef)
 }
 ```
 
-## Skeet Document
+## Skeet Framework Document
 
 - [https://skeet.dev](https://skeet.dev)
+
+- [https://skeet-framework.github.io](https://skeet-framework.github.io)
 
 ## Skeet TypeScript Serverless Framework
 
