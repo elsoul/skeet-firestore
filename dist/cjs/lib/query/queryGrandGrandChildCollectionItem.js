@@ -14,7 +14,7 @@ const queryGrandGrandChildCollectionItem = async (parentCollectionName, childCol
         return data;
     }
     catch (error) {
-        throw new Error(`queryGrandGrandChildCollectionItem(${grandGrandChildCollectionName}): ${error}`);
+        return [];
     }
 };
 exports.queryGrandGrandChildCollectionItem = queryGrandGrandChildCollectionItem;

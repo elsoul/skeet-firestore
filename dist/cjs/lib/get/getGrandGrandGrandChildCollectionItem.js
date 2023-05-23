@@ -15,7 +15,7 @@ const getGrandGrandGrandChildCollectionItem = async (parentCollectionName, child
         return grandGrandGrandChildCollectionItem;
     }
     catch (error) {
-        throw new Error(`getGrandGrandGrandChildCollectionItem(${grandGrandGrandChildCollectionName}): ${error}`);
+        return false;
     }
 };
 exports.getGrandGrandGrandChildCollectionItem = getGrandGrandGrandChildCollectionItem;

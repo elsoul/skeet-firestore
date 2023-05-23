@@ -38,8 +38,6 @@ export const queryGrandGrandChildCollectionItem = async <
 
     return data
   } catch (error) {
-    throw new Error(
-      `queryGrandGrandChildCollectionItem(${grandGrandChildCollectionName}): ${error}`
-    )
+    return []
   }
 }

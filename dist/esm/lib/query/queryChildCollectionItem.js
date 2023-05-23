@@ -9,7 +9,7 @@ export const queryChildCollectionItem = async (parentCollectionName, childCollec
         return data;
     }
     catch (error) {
-        throw new Error(`queryChildCollectionItem(${childCollectionName}): ${error}`);
+        return [];
     }
 };
 //# sourceMappingURL=queryChildCollectionItem.js.map

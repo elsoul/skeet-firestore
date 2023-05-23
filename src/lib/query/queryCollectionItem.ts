@@ -12,6 +12,6 @@ export const queryCollectionItem = async <Parent>(
 
     return data
   } catch (error) {
-    throw new Error(`queryCollectionItem(${collectionName}): ${error}`)
+    return []
   }
 }

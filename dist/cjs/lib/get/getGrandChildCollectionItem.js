@@ -13,7 +13,7 @@ const getGrandChildCollectionItem = async (parentCollectionName, childCollection
         return grandChildCollectionItem;
     }
     catch (error) {
-        throw new Error(`getGrandChildCollectionItem(${grandChildCollectionName}): ${error}`);
+        return false;
     }
 };
 exports.getGrandChildCollectionItem = getGrandChildCollectionItem;

@@ -11,7 +11,7 @@ const queryCollectionItem = async (collectionName, queries) => {
         return data;
     }
     catch (error) {
-        throw new Error(`queryCollectionItem(${collectionName}): ${error}`);
+        return [];
     }
 };
 exports.queryCollectionItem = queryCollectionItem;

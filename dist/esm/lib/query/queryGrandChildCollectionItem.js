@@ -10,7 +10,7 @@ export const queryGrandChildCollectionItem = async (parentCollectionName, childC
         return data;
     }
     catch (error) {
-        throw new Error(`queryGrandChildCollectionItem(${grandChildCollectionName}): ${error}`);
+        return [];
     }
 };
 //# sourceMappingURL=queryGrandChildCollectionItem.js.map

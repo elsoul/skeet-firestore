@@ -11,7 +11,7 @@ const getCollectionItem = async (parentCollectionName, parentId) => {
         return parentCollectionItem;
     }
     catch (error) {
-        throw new Error(`getCollectionItem(${parentCollectionName}): ${error}`);
+        return false;
     }
 };
 exports.getCollectionItem = getCollectionItem;
