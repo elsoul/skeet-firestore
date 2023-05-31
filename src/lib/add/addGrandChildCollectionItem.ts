@@ -1,5 +1,5 @@
 import { add, collection, subcollection, set, get } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { FieldValue } from 'firebase-admin/firestore'
 
 export const addGrandChildCollectionItem = async <GrandChild, Child, Parent>(
   parentCollectionName: string,
@@ -22,7 +22,7 @@ export const addGrandChildCollectionItem = async <GrandChild, Child, Parent>(
     )
 
     const body = grandChildCollection(childId)
-    const datetimeNow = await getTimestamp()
+    const datetimeNow = await FieldValue.serverTimestamp()
     const data = {
       ...params,
       createdAt: datetimeNow,

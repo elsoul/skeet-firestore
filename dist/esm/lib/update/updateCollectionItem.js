@@ -1,11 +1,11 @@
 import { collection, update } from 'typesaurus';
-import { getTimestamp } from '../../utils/time';
+import { FieldValue } from 'firebase-admin/firestore';
 export const updateCollectionItem = async (collectionName, collectionId, params) => {
     try {
         const mainCollection = collection(collectionName);
         const data = {
             ...params,
-            updatedAt: getTimestamp(),
+            updatedAt: FieldValue.serverTimestamp(),
         };
         await update(mainCollection, collectionId, data);
         return true;

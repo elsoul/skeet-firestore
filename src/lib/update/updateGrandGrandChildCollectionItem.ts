@@ -1,5 +1,5 @@
 import { collection, subcollection, update } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { FieldValue } from 'firebase-admin/firestore'
 
 export const updateGrandGrandChildCollectionItem = async <
   GrandGrandChild,
@@ -33,7 +33,7 @@ export const updateGrandGrandChildCollectionItem = async <
     >(grandGrandChildCollectionName, grandChildCollection(childId))
     const data = {
       ...params,
-      updatedAt: getTimestamp(),
+      updatedAt: FieldValue.serverTimestamp(),
     }
     await update(
       grandGrandChildCollection(grandChildId),

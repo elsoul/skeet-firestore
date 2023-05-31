@@ -1,5 +1,5 @@
 import { collection, subcollection, update } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { FieldValue } from 'firebase-admin/firestore'
 
 export const updateChildCollectionItem = async <Child, Parent>(
   parentCollectionName: string,
@@ -16,7 +16,7 @@ export const updateChildCollectionItem = async <Child, Parent>(
     )
     const data = {
       ...params,
-      updatedAt: getTimestamp(),
+      updatedAt: FieldValue.serverTimestamp(),
     }
 
     await update(childCollection(parentId), childId, data)
