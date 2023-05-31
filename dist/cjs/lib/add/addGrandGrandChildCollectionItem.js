@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addGrandGrandChildCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const firestore_1 = require("firebase-admin/firestore");
+const time_1 = require("../../utils/time");
 const addGrandGrandChildCollectionItem = async (parentCollectionName, childCollectionName, grandChildCollectionName, grandGrandChildCollectionName, parentId, childId, grandChildId, params, id) => {
     try {
         const parentCollection = (0, typesaurus_1.collection)(parentCollectionName);
@@ -10,7 +10,7 @@ const addGrandGrandChildCollectionItem = async (parentCollectionName, childColle
         const grandChildCollection = (0, typesaurus_1.subcollection)(grandChildCollectionName, childCollection(parentId));
         const grandGrandChildCollection = (0, typesaurus_1.subcollection)(grandGrandChildCollectionName, grandChildCollection(childId));
         const body = grandGrandChildCollection(grandChildId);
-        const datetimeNow = firestore_1.FieldValue.serverTimestamp();
+        const datetimeNow = (0, time_1.getTimestamp)();
         const data = {
             ...params,
             createdAt: datetimeNow,

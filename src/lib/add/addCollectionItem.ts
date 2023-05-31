@@ -1,5 +1,5 @@
 import { collection, add, get, upset, Ref } from 'typesaurus'
-import { FieldValue } from 'firebase-admin/firestore'
+import { getTimestamp } from '../../utils/time'
 
 export const addCollectionItem = async <T>(
   collectionName: string,
@@ -8,7 +8,7 @@ export const addCollectionItem = async <T>(
 ): Promise<Ref<T>> => {
   try {
     const mainCollection = collection<T>(collectionName)
-    const datetimeNow = FieldValue.serverTimestamp()
+    const datetimeNow = getTimestamp()
     const data = {
       ...params,
       createdAt: datetimeNow,

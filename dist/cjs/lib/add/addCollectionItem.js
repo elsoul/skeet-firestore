@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const firestore_1 = require("firebase-admin/firestore");
+const time_1 = require("../../utils/time");
 const addCollectionItem = async (collectionName, params, id) => {
     try {
         const mainCollection = (0, typesaurus_1.collection)(collectionName);
-        const datetimeNow = firestore_1.FieldValue.serverTimestamp();
+        const datetimeNow = (0, time_1.getTimestamp)();
         const data = {
             ...params,
             createdAt: datetimeNow,
