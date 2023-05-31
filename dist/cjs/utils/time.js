@@ -41,7 +41,7 @@ const getTimestamp = () => {
     const now = new Date();
     const timeZone = 'UTC';
     const nowUtc = (0, date_fns_tz_1.utcToZonedTime)(now, timeZone);
-    const timestamp = (0, date_fns_1.format)(nowUtc, 'yyyy-MM-dd:HH:mm:ss');
+    const timestamp = (0, date_fns_1.format)(nowUtc, 'yyyy-MM-dd:HH:mm:ss:SSS');
     return timestamp;
 };
 exports.getTimestamp = getTimestamp;

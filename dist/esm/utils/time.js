@@ -35,7 +35,7 @@ export const getTimestamp = () => {
     const now = new Date();
     const timeZone = 'UTC';
     const nowUtc = utcToZonedTime(now, timeZone);
-    const timestamp = format(nowUtc, 'yyyy-MM-dd:HH:mm:ss');
+    const timestamp = format(nowUtc, 'yyyy-MM-dd:HH:mm:ss:SSS');
     return timestamp;
 };
 //# sourceMappingURL=time.js.map
