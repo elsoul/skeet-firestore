@@ -25,4 +25,5 @@ export {
   removeGrandGrandChildCollectionItem,
   removeGrandGrandGrandChildCollectionItem,
   Ref,
+  Timestamp,
 } from './lib'
