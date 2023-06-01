@@ -1,5 +1,4 @@
-import { collection, add, get, upset, Ref } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { collection, add, get, upset, Ref, value } from 'typesaurus'
 
 export const addCollectionItem = async <T>(
   collectionName: string,
@@ -8,7 +7,7 @@ export const addCollectionItem = async <T>(
 ): Promise<Ref<T>> => {
   try {
     const mainCollection = collection<T>(collectionName)
-    const datetimeNow = getTimestamp()
+    const datetimeNow = value('serverDate')
     const data = {
       ...params,
       createdAt: datetimeNow,

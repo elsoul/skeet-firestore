@@ -1,5 +1,4 @@
-import { collection, subcollection, update } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { collection, subcollection, update, value } from 'typesaurus'
 
 export const updateGrandGrandChildCollectionItem = async <
   GrandGrandChild,
@@ -33,7 +32,7 @@ export const updateGrandGrandChildCollectionItem = async <
     >(grandGrandChildCollectionName, grandChildCollection(childId))
     const data = {
       ...params,
-      updatedAt: getTimestamp(),
+      updatedAt: value('serverDate'),
     }
     await update(
       grandGrandChildCollection(grandChildId),

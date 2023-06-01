@@ -1,5 +1,4 @@
-import { add, collection, subcollection, set, get } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { collection, add, set, get, value, subcollection } from 'typesaurus'
 
 export const addGrandGrandChildCollectionItem = async <
   GrandChild,
@@ -32,7 +31,7 @@ export const addGrandGrandChildCollectionItem = async <
     )
 
     const body = grandGrandChildCollection(grandChildId)
-    const datetimeNow = getTimestamp()
+    const datetimeNow = value('serverDate')
     const data = {
       ...params,
       createdAt: datetimeNow,

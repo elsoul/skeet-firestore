@@ -1,5 +1,4 @@
-import { collection, update } from 'typesaurus'
-import { getTimestamp } from '../../utils/time'
+import { collection, update, value } from 'typesaurus'
 
 export const updateCollectionItem = async <T>(
   collectionName: string,
@@ -10,7 +9,7 @@ export const updateCollectionItem = async <T>(
     const mainCollection = collection<T>(collectionName)
     const data = {
       ...params,
-      updatedAt: getTimestamp(),
+      updatedAt: value('serverDate'),
     }
     await update(mainCollection, collectionId, data)
     return true

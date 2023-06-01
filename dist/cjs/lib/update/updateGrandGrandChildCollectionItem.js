@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateGrandGrandChildCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const time_1 = require("../../utils/time");
 const updateGrandGrandChildCollectionItem = async (parentCollectionName, childCollectionName, grandChildCollectionName, grandGrandChildCollectionName, parentId, childId, grandChildId, grandGrandChildId, params) => {
     try {
         const parentCollection = (0, typesaurus_1.collection)(parentCollectionName);
@@ -11,7 +10,7 @@ const updateGrandGrandChildCollectionItem = async (parentCollectionName, childCo
         const grandGrandChildCollection = (0, typesaurus_1.subcollection)(grandGrandChildCollectionName, grandChildCollection(childId));
         const data = {
             ...params,
-            updatedAt: (0, time_1.getTimestamp)(),
+            updatedAt: (0, typesaurus_1.value)('serverDate'),
         };
         await (0, typesaurus_1.update)(grandGrandChildCollection(grandChildId), grandGrandChildId, data);
         return true;

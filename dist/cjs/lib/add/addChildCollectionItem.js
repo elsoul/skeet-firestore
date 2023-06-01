@@ -2,13 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addChildCollectionItem = void 0;
 const typesaurus_1 = require("typesaurus");
-const time_1 = require("../../utils/time");
 const addChildCollectionItem = async (parentCollectionName, childCollectionName, parentId, params, id) => {
     try {
         const parentCollection = (0, typesaurus_1.collection)(parentCollectionName);
         const mainCollection = (0, typesaurus_1.subcollection)(childCollectionName, parentCollection);
         const body = mainCollection(parentId);
-        const datetimeNow = (0, time_1.getTimestamp)();
+        const datetimeNow = (0, typesaurus_1.value)('serverDate');
         const data = {
             ...params,
             createdAt: datetimeNow,
