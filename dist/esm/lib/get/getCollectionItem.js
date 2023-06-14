@@ -8,7 +8,7 @@ export const getCollectionItem = async (parentCollectionName, parentId) => {
         return parentCollectionItem;
     }
     catch (error) {
-        return false;
+        return null;
     }
 };
 //# sourceMappingURL=getCollectionItem.js.map

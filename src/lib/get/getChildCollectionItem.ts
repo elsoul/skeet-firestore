@@ -21,6 +21,6 @@ export const getChildCollectionItem = async <Child, Parent>(
 
     return childCollectionItem
   } catch (error) {
-    return false
+    return null
   }
 }

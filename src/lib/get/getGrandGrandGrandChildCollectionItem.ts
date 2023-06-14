@@ -49,6 +49,6 @@ export const getGrandGrandGrandChildCollectionItem = async <
 
     return grandGrandGrandChildCollectionItem
   } catch (error) {
-    return false
+    return null
   }
 }

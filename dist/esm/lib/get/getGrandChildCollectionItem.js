@@ -10,7 +10,7 @@ export const getGrandChildCollectionItem = async (parentCollectionName, childCol
         return grandChildCollectionItem;
     }
     catch (error) {
-        return false;
+        return null;
     }
 };
 //# sourceMappingURL=getGrandChildCollectionItem.js.map

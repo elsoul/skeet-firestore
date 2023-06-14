@@ -12,7 +12,7 @@ const getChildCollectionItem = async (parentCollectionName, childCollectionName,
         return childCollectionItem;
     }
     catch (error) {
-        return false;
+        return null;
     }
 };
 exports.getChildCollectionItem = getChildCollectionItem;

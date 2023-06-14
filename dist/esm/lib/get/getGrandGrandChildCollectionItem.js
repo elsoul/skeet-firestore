@@ -11,7 +11,7 @@ export const getGrandGrandChildCollectionItem = async (parentCollectionName, chi
         return grandGrandChildCollectionItem;
     }
     catch (error) {
-        throw new Error(`getGrandGrandChildCollectionItem(${grandGrandChildCollectionName}): ${error}`);
+        return null;
     }
 };
 //# sourceMappingURL=getGrandGrandChildCollectionItem.js.map
