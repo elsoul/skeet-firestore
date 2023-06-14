@@ -19,6 +19,5 @@ __exportStar(require("./get"), exports);
 __exportStar(require("./update"), exports);
 __exportStar(require("./query"), exports);
 __exportStar(require("./remove"), exports);
-__exportStar(require("./typesaurus"), exports);
 __exportStar(require("./firestore"), exports);
 //# sourceMappingURL=index.js.map

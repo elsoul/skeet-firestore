@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Timestamp = exports.removeGrandGrandGrandChildCollectionItem = exports.removeGrandGrandChildCollectionItem = exports.removeGrandChildCollectionItem = exports.removeChildCollectionItem = exports.removeCollectionItem = exports.queryGrandGrandGrandChildCollectionItem = exports.queryGrandGrandChildCollectionItem = exports.queryGrandChildCollectionItem = exports.queryChildCollectionItem = exports.queryCollectionItem = exports.updateGrandGrandGrandChildCollectionItem = exports.updateGrandGrandChildCollectionItem = exports.updateGrandChildCollectionItem = exports.updateChildCollectionItem = exports.updateCollectionItem = exports.getGrandGrandGrandChildCollectionItem = exports.getGrandGrandChildCollectionItem = exports.getGrandChildCollectionItem = exports.getChildCollectionItem = exports.getCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
+exports.onQuery = exports.onGetMany = exports.onGet = exports.onAll = exports.add = exports.all = exports.batch = exports.upset = exports.update = exports.remove = exports.set = exports.subcollection = exports.DocId = exports.query = exports.limit = exports.order = exports.where = exports.Timestamp = exports.removeGrandGrandGrandChildCollectionItem = exports.removeGrandGrandChildCollectionItem = exports.removeGrandChildCollectionItem = exports.removeChildCollectionItem = exports.removeCollectionItem = exports.queryGrandGrandGrandChildCollectionItem = exports.queryGrandGrandChildCollectionItem = exports.queryGrandChildCollectionItem = exports.queryChildCollectionItem = exports.queryCollectionItem = exports.updateGrandGrandGrandChildCollectionItem = exports.updateGrandGrandChildCollectionItem = exports.updateGrandChildCollectionItem = exports.updateChildCollectionItem = exports.updateCollectionItem = exports.getGrandGrandGrandChildCollectionItem = exports.getGrandGrandChildCollectionItem = exports.getGrandChildCollectionItem = exports.getChildCollectionItem = exports.getCollectionItem = exports.addGrandGrandGrandChildCollectionItem = exports.addGrandGrandChildCollectionItem = exports.addGrandChildCollectionItem = exports.addChildCollectionItem = exports.addCollectionItem = void 0;
 var lib_1 = require("./lib");
 Object.defineProperty(exports, "addCollectionItem", { enumerable: true, get: function () { return lib_1.addCollectionItem; } });
 Object.defineProperty(exports, "addChildCollectionItem", { enumerable: true, get: function () { return lib_1.addChildCollectionItem; } });
@@ -28,4 +28,22 @@ Object.defineProperty(exports, "removeGrandChildCollectionItem", { enumerable: t
 Object.defineProperty(exports, "removeGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.removeGrandGrandChildCollectionItem; } });
 Object.defineProperty(exports, "removeGrandGrandGrandChildCollectionItem", { enumerable: true, get: function () { return lib_1.removeGrandGrandGrandChildCollectionItem; } });
 Object.defineProperty(exports, "Timestamp", { enumerable: true, get: function () { return lib_1.Timestamp; } });
+var typesaurus_1 = require("typesaurus");
+Object.defineProperty(exports, "where", { enumerable: true, get: function () { return typesaurus_1.where; } });
+Object.defineProperty(exports, "order", { enumerable: true, get: function () { return typesaurus_1.order; } });
+Object.defineProperty(exports, "limit", { enumerable: true, get: function () { return typesaurus_1.limit; } });
+Object.defineProperty(exports, "query", { enumerable: true, get: function () { return typesaurus_1.query; } });
+Object.defineProperty(exports, "DocId", { enumerable: true, get: function () { return typesaurus_1.DocId; } });
+Object.defineProperty(exports, "subcollection", { enumerable: true, get: function () { return typesaurus_1.subcollection; } });
+Object.defineProperty(exports, "set", { enumerable: true, get: function () { return typesaurus_1.set; } });
+Object.defineProperty(exports, "remove", { enumerable: true, get: function () { return typesaurus_1.remove; } });
+Object.defineProperty(exports, "update", { enumerable: true, get: function () { return typesaurus_1.update; } });
+Object.defineProperty(exports, "upset", { enumerable: true, get: function () { return typesaurus_1.upset; } });
+Object.defineProperty(exports, "batch", { enumerable: true, get: function () { return typesaurus_1.batch; } });
+Object.defineProperty(exports, "all", { enumerable: true, get: function () { return typesaurus_1.all; } });
+Object.defineProperty(exports, "add", { enumerable: true, get: function () { return typesaurus_1.add; } });
+Object.defineProperty(exports, "onAll", { enumerable: true, get: function () { return typesaurus_1.onAll; } });
+Object.defineProperty(exports, "onGet", { enumerable: true, get: function () { return typesaurus_1.onGet; } });
+Object.defineProperty(exports, "onGetMany", { enumerable: true, get: function () { return typesaurus_1.onGetMany; } });
+Object.defineProperty(exports, "onQuery", { enumerable: true, get: function () { return typesaurus_1.onQuery; } });
 //# sourceMappingURL=index.js.map
