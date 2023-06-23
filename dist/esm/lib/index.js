@@ -4,4 +4,5 @@ export * from './update';
 export * from './query';
 export * from './remove';
 export * from './firestore';
+export * from './crypt';
 //# sourceMappingURL=index.js.map

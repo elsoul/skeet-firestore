@@ -25,6 +25,9 @@ export {
   removeGrandGrandChildCollectionItem,
   removeGrandGrandGrandChildCollectionItem,
   Timestamp,
+  encrypt,
+  decrypt,
+  generateIv,
 } from './lib'
 export {
   where,
