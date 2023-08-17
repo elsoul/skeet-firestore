@@ -31,7 +31,7 @@
     "build:esm": "tsc -b tsconfig.esm.json",
     "build-doc": "typedoc src/index.ts --out docs",
     "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
-    "publish": "yarn build && npm publish",
+    "publish": "npm publish",
     "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts"
   },
   "dependencies": {
