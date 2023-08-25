@@ -1,0 +1,51 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addCollectionItem = void 0;
+const createCollectionRef_1 = require("./createCollectionRef");
+/**
+ * Adds a new document to the specified collection in Firestore.
+ *
+ * @param db - The instance of the Firestore database to use.
+ * @param collectionPath - The path of the collection to which the document will be added.
+ * @param params - The data of the document to be added.
+ *
+ * @returns A reference to the added document.
+ *
+ * @throws Throws an exception with an error message if an error occurs.
+ *
+ * @example
+ * ```typescript
+ * const db = admin.firestore();
+ * const data: User = {
+ *   name: "John Doe",
+ *   age: 30
+ * };
+ *
+ * async function run() {
+ *   try {
+ *     const path = 'Users'
+ *     const docRef = await addCollectionItem<User>(db, path, data);
+ *     console.log(`Document added with ID: ${docRef.id}`);
+ *   } catch (error) {
+ *     console.error(`Error adding document: ${error}`);
+ *   }
+ * }
+ *
+ * run();
+ * ```
+ */
+const addCollectionItem = async (db, collectionPath, params) => {
+    try {
+        const collectionRef = (0, createCollectionRef_1.createCollectionRef)(db, collectionPath);
+        const data = await collectionRef.add(params);
+        if (!data) {
+            throw new Error('no data');
+        }
+        return data;
+    }
+    catch (error) {
+        throw new Error(`Error adding document: ${error}`);
+    }
+};
+exports.addCollectionItem = addCollectionItem;
+//# sourceMappingURL=addCollectionItem.js.map
