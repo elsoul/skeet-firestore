@@ -1,0 +1,1 @@
+{"version":3,"file":"createDataRef.js","sourceRoot":"","sources":["../../../src/lib/createDataRef.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,4BAA4B,EAAE,MAAM,gCAAgC,CAAA;AAE7E,MAAM,CAAC,MAAM,aAAa,GAAG,CAC3B,EAA6B,EAC7B,cAAsB,EACtB,EAAE;IACF,OAAO,EAAE,CAAC,GAAG,CAAC,cAAc,CAAC,CAAC,aAAa,CAAC,4BAA4B,EAAK,CAAC,CAAA;AAChF,CAAC,CAAA"}
