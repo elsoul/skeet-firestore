@@ -16,6 +16,10 @@ const createFirestoreDataConverter_1 = require("./createFirestoreDataConverter")
  *
  * @example
  * ```typescript
+ * import { firestore } from 'firebase-admin'
+ * import * as admin from 'firebase-admin'
+ * import { query } from '@skeet-framework/firestore
+ *
  * const db = admin.firestore();
  * const conditions: QueryCondition[] = [
  *   { field: "age", operator: ">", value: 25 }
@@ -24,7 +28,7 @@ const createFirestoreDataConverter_1 = require("./createFirestoreDataConverter")
  * async function run() {
  *   try {
  *     const path = 'Users'
- *     const users = await queryCollectionItems<User>(db, path, conditions);
+ *     const users = await query<User>(db, path, conditions);
  *     console.log(`Found ${users.length} users over 25 years old.`);
  *   } catch (error) {
  *     console.error(`Error querying collection: ${error}`);

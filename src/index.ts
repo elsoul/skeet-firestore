@@ -1,14 +1,14 @@
 export {
   createDataRef,
   createFirestoreDataConverter,
-  getCollectionItem,
+  getCollectionItem as get,
   getCollectionItemData,
   serverTimestamp,
-  addCollectionItem,
+  addCollectionItem as add,
   createCollectionRef,
-  addMultipleCollectionItems,
-  queryCollectionItems,
-  updateCollectionItem,
-  deleteCollectionItem,
+  addMultipleCollectionItems as adds,
+  queryCollectionItems as query,
+  updateCollectionItem as update,
+  deleteCollectionItem as delete,
 } from './lib'
 export { Timestamp } from '@google-cloud/firestore'

@@ -17,6 +17,10 @@ const createCollectionRef_1 = require("./createCollectionRef");
  *
  * @example
  * ```typescript
+ * import { firestore } from 'firebase-admin'
+ * import * as admin from 'firebase-admin'
+ * import { adds } from '@skeet-framework/firestore
+ *
  * const db = admin.firestore();
  * const users: User[] = [
  *   { name: "John Doe", age: 30 },
@@ -27,7 +31,7 @@ const createCollectionRef_1 = require("./createCollectionRef");
  * async function run() {
  *   try {
  *     const path = 'Users'
- *     const results = await addMultipleCollectionItems<User>(db, path, users);
+ *     const results = await adds<User>(db, path, users);
  *     console.log(`Added ${users.length} users in ${results.length} batches.`);
  *   } catch (error) {
  *     console.error(`Error adding documents: ${error}`);

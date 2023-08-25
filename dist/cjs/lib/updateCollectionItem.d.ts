@@ -14,6 +14,10 @@ import * as admin from 'firebase-admin';
  *
  * @example
  * ```typescript
+ * import { firestore } from 'firebase-admin'
+ * import * as admin from 'firebase-admin'
+ * import { update } from '@skeet-framework/firestore
+ *
  * const db = admin.firestore();
  * const updatedData: firestore.UpdateData<User> = {
  *   age: 31
@@ -23,7 +27,7 @@ import * as admin from 'firebase-admin';
  *   try {
  *     const path = 'Users'
  *     const docId = '123456'; // Assuming this ID exists in the Users collection.
- *     const success = await updateCollectionItem<User>(db, path, docId, updatedData);
+ *     const success = await update<User>(db, path, docId, updatedData);
  *     if (success) {
  *       console.log(`Document with ID ${docId} updated successfully.`);
  *     }

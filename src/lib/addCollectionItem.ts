@@ -15,6 +15,10 @@ import * as admin from 'firebase-admin'
  *
  * @example
  * ```typescript
+ * import { firestore } from 'firebase-admin'
+ * import * as admin from 'firebase-admin'
+ * import { add } from '@skeet-framework/firestore
+ *
  * const db = admin.firestore();
  * const data: User = {
  *   name: "John Doe",
@@ -24,7 +28,7 @@ import * as admin from 'firebase-admin'
  * async function run() {
  *   try {
  *     const path = 'Users'
- *     const docRef = await addCollectionItem<User>(db, path, data);
+ *     const docRef = await add<User>(db, path, data);
  *     console.log(`Document added with ID: ${docRef.id}`);
  *   } catch (error) {
  *     console.error(`Error adding document: ${error}`);

@@ -14,13 +14,17 @@ exports.deleteCollectionItem = void 0;
  *
  * @example
  * ```typescript
+ * import { firestore } from 'firebase-admin'
+ * import * as admin from 'firebase-admin'
+ * import { delete } from '@skeet-framework/firestore
+ *
  * const db = admin.firestore();
  *
  * async function run() {
  *   try {
  *     const path = 'Users'
  *     const docId = '123456'; // Assuming this ID exists in the Users collection.
- *     const success = await deleteCollectionItem(db, path, docId);
+ *     const success = await delete(db, path, docId);
  *     if (success) {
  *       console.log(`Document with ID ${docId} deleted successfully.`);
  *     }

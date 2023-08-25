@@ -35,7 +35,8 @@
   </a>
 </p>
 
-<a id="md:skeet-framework-plugin---firestore" class="tsd-anchor"></a><h1><a href="#md:skeet-framework-plugin---firestore">Skeet Framework Plugin - Firestore</a></h1><p>Skeet Firestore Plugin for CRUD Firestore operation with Typesaurus.</p>
+<a id="md:skeet-framework-plugin---firestore" class="tsd-anchor"></a><h1><a href="#md:skeet-framework-plugin---firestore">Skeet Framework Plugin - Firestore</a></h1><p>Skeet Firestore Plugin for CRUD Firestore operation with Firestore Converter.
+Type safe, easy to use, and easy to test.</p>
 <a id="md:installation" class="tsd-anchor"></a><h1><a href="#md:installation">Installation</a></h1><pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">skeet</span><span class="hl-0"> </span><span class="hl-1">yarn</span><span class="hl-0"> </span><span class="hl-1">add</span><span class="hl-0"> </span><span class="hl-1">-p</span><span class="hl-0"> </span><span class="hl-1">@skeet-framework/firestore</span>
 </code><button>Copy</button></pre>
 <p>or</p>
@@ -47,179 +48,30 @@
 <li><p><a href="https://elsoul.github.io/skeet-firestore/">Skeet Firestore TypeDoc</a></p>
 </li>
 </ul>
-<a id="md:features" class="tsd-anchor"></a><h2><a href="#md:features">Features</a></h2><p>There are 5 actions in the Skeet Firestore plugin.</p>
-<table>
-<thead>
-<tr>
-<th>Function Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>addCollectionItem</td>
-<td>Add Collection Item</td>
-</tr>
-<tr>
-<td>getCollectionItem</td>
-<td>Get Collection Item</td>
-</tr>
-<tr>
-<td>queryCollectionItem</td>
-<td>Query Collection Items</td>
-</tr>
-<tr>
-<td>updateCollectionItem</td>
-<td>Update Collection Item</td>
-</tr>
-<tr>
-<td>removeCollectionItem</td>
-<td>Remove Collection Item</td>
-</tr>
-</tbody></table>
-<p>Nested Document and Collection are supported.</p>
+<a id="md:features" class="tsd-anchor"></a><h1><a href="#md:features">Features</a></h1><p>All CRUD operations are supported with Firestore Converter.</p>
 <ul>
-<li>Add/Get/Query/Update/Remove Collection Item</li>
-<li>Add/Get/Query/Update/Remove Child Collection Item</li>
-<li>Add/Get/Query/Update/Remove Grand Child Collection Item</li>
-<li>Add/Get/Query/Update/Remove Great Grand Child Collection Item</li>
-<li>Add/Get/Query/Update/Remove Great Great Grand Child Collection Item</li>
+<li><input checked="" disabled="" type="checkbox"> Add Collection Item</li>
+<li><input checked="" disabled="" type="checkbox"> Adds Collection Items</li>
+<li><input checked="" disabled="" type="checkbox"> Update Collection Item</li>
+<li><input checked="" disabled="" type="checkbox"> Delete Collection Item</li>
+<li><input checked="" disabled="" type="checkbox"> Get Collection Item</li>
+<li><input checked="" disabled="" type="checkbox"> Query Collection Items</li>
 </ul>
-<p>Available functions for Nested Tree.</p>
-<table>
-<thead>
-<tr>
-<th>Function Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>addChildCollectionItem</td>
-<td>Add Child Collection Item</td>
-</tr>
-<tr>
-<td>addGrandChildCollectionItem</td>
-<td>Add Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>addGrandGrandChildCollectionItem</td>
-<td>Add Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>addGreatGrandGrandChildCollectionItem</td>
-<td>Add Great Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>getChildCollectionItem</td>
-<td>Get Child Collection Item</td>
-</tr>
-<tr>
-<td>getGrandChildCollectionItem</td>
-<td>Get Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>getGrandGrandChildCollectionItem</td>
-<td>Get Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>getGreatGrandGrandChildCollectionItem</td>
-<td>Get Great Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>queryChildCollectionItem</td>
-<td>Query Child Collection Items</td>
-</tr>
-<tr>
-<td>queryGrandChildCollectionItem</td>
-<td>Query Grand Child Collection Items</td>
-</tr>
-<tr>
-<td>queryGrandGrandChildCollectionItem</td>
-<td>Query Grand Grand Child Collection Items</td>
-</tr>
-<tr>
-<td>queryGreatGrandGrandChildCollectionItem</td>
-<td>Query Great Grand Grand Child Collection Items</td>
-</tr>
-<tr>
-<td>updateChildCollectionItem</td>
-<td>Update Child Collection Item</td>
-</tr>
-<tr>
-<td>updateGrandChildCollectionItem</td>
-<td>Update Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>updateGrandGrandChildCollectionItem</td>
-<td>Update Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>updateGreatGrandGrandChildCollectionItem</td>
-<td>Update Great Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>removeChildCollectionItem</td>
-<td>Remove Child Collection Item</td>
-</tr>
-<tr>
-<td>removeGrandChildCollectionItem</td>
-<td>Remove Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>removeGrandGrandChildCollectionItem</td>
-<td>Remove Grand Grand Child Collection Item</td>
-</tr>
-<tr>
-<td>removeGreatGrandGrandChildCollectionItem</td>
-<td>Remove Great Grand Grand Child Collection Item</td>
-</tr>
-</tbody></table>
-<a id="md:install" class="tsd-anchor"></a><h2><a href="#md:install">Install</a></h2><pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">skeet</span><span class="hl-0"> </span><span class="hl-1">yarn</span><span class="hl-0"> </span><span class="hl-1">add</span><span class="hl-0"> </span><span class="hl-1">-p</span><span class="hl-0"> </span><span class="hl-1">@skeet-framework/firestore</span>
-</code><button>Copy</button></pre>
-<p>or</p>
-<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">yarn</span><span class="hl-0"> </span><span class="hl-1">add</span><span class="hl-0"> </span><span class="hl-1">@skeet-framework/firestore</span>
-</code><button>Copy</button></pre>
-<a id="md:usage" class="tsd-anchor"></a><h2><a href="#md:usage">Usage</a></h2><a id="md:initialize" class="tsd-anchor"></a><h3><a href="#md:initialize">Initialize</a></h3><pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-3">*</span><span class="hl-0"> </span><span class="hl-2">as</span><span class="hl-0"> </span><span class="hl-4">admin</span><span class="hl-0"> </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase-admin&#39;</span><br/><br/><span class="hl-4">admin</span><span class="hl-0">.</span><span class="hl-5">initializeApp</span><span class="hl-0">()</span>
+<a id="md:usage" class="tsd-anchor"></a><h1><a href="#md:usage">Usage</a></h1><a id="md:initialize" class="tsd-anchor"></a><h2><a href="#md:initialize">Initialize</a></h2><pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-3">*</span><span class="hl-0"> </span><span class="hl-2">as</span><span class="hl-0"> </span><span class="hl-4">admin</span><span class="hl-0"> </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase-admin&#39;</span><br/><br/><span class="hl-4">admin</span><span class="hl-0">.</span><span class="hl-5">initializeApp</span><span class="hl-0">()</span>
 </code><button>Copy</button></pre>
 <p>or</p>
 <pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-3">*</span><span class="hl-0"> </span><span class="hl-2">as</span><span class="hl-0"> </span><span class="hl-4">firebase</span><span class="hl-0"> </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase/app&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase/firestore&#39;</span><br/><br/><span class="hl-4">firebase</span><span class="hl-0">.</span><span class="hl-5">initializeApp</span><span class="hl-0">({</span><br/><span class="hl-0">  </span><span class="hl-6">// Project configuration</span><br/><span class="hl-0">})</span>
 </code><button>Copy</button></pre>
-<a id="md:example-model" class="tsd-anchor"></a><h3><a href="#md:example-model">Example Model</a></h3><pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">Ref</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;typesaurus&#39;</span><br/><br/><span class="hl-6">// CollectionId: User</span><br/><span class="hl-6">// DocumentId: uid</span><br/><span class="hl-2">export</span><span class="hl-0"> </span><span class="hl-3">type</span><span class="hl-0"> </span><span class="hl-7">User</span><span class="hl-0"> = {</span><br/><span class="hl-0">  </span><span class="hl-4">uid</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">username</span><span class="hl-0">: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">email</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">iconUrl</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">createdAt</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">updatedAt</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">// CollectionId: UserChatRoom</span><br/><span class="hl-6">// DocumentId: auto</span><br/><span class="hl-2">export</span><span class="hl-0"> </span><span class="hl-3">type</span><span class="hl-0"> </span><span class="hl-7">UserChatRoom</span><span class="hl-0"> = {</span><br/><span class="hl-0">  </span><span class="hl-4">userRef</span><span class="hl-0">: </span><span class="hl-7">Ref</span><span class="hl-0">&lt;</span><span class="hl-7">User</span><span class="hl-0">&gt;</span><br/><span class="hl-0">  </span><span class="hl-4">model</span><span class="hl-0">: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">maxTokens</span><span class="hl-0">: </span><span class="hl-7">number</span><br/><span class="hl-0">  </span><span class="hl-4">temperature</span><span class="hl-0">: </span><span class="hl-7">number</span><br/><span class="hl-0">  </span><span class="hl-4">stream</span><span class="hl-0">: </span><span class="hl-7">boolean</span><br/><span class="hl-0">  </span><span class="hl-4">createdAt</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">updatedAt</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">// CollectionId: UserChatRoomMessage</span><br/><span class="hl-6">// DocumentId: auto</span><br/><span class="hl-2">export</span><span class="hl-0"> </span><span class="hl-3">type</span><span class="hl-0"> </span><span class="hl-7">UserChatRoomMessage</span><span class="hl-0"> = {</span><br/><span class="hl-0">  </span><span class="hl-4">userChatRoomRef</span><span class="hl-0">: </span><span class="hl-7">Ref</span><span class="hl-0">&lt;</span><span class="hl-7">UserChatRoom</span><span class="hl-0">&gt;</span><br/><span class="hl-0">  </span><span class="hl-4">role</span><span class="hl-0">: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">content</span><span class="hl-0">: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">createdAt</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">  </span><span class="hl-4">updatedAt</span><span class="hl-0">?: </span><span class="hl-7">string</span><br/><span class="hl-0">}</span>
+<a id="md:add-collection-item" class="tsd-anchor"></a><h2><a href="#md:add-collection-item">Add Collection Item</a></h2><pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">firestore</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase-admin&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-3">*</span><span class="hl-0"> </span><span class="hl-2">as</span><span class="hl-0"> </span><span class="hl-4">admin</span><span class="hl-0"> </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase-admin&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">add</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@skeet-framework/firestor</span><span class="hl-7">e</span><br/><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">db</span><span class="hl-0"> = </span><span class="hl-4">admin</span><span class="hl-0">.</span><span class="hl-5">firestore</span><span class="hl-0">();</span><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">data</span><span class="hl-0">: </span><span class="hl-9">User</span><span class="hl-0"> = {</span><br/><span class="hl-0">  </span><span class="hl-4">name:</span><span class="hl-0"> </span><span class="hl-1">&quot;John Doe&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">age:</span><span class="hl-0"> </span><span class="hl-10">30</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-3">async</span><span class="hl-0"> </span><span class="hl-3">function</span><span class="hl-0"> </span><span class="hl-5">run</span><span class="hl-0">() {</span><br/><span class="hl-0">  </span><span class="hl-2">try</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">path</span><span class="hl-0"> = </span><span class="hl-1">&#39;Users&#39;</span><br/><span class="hl-0">    </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">docRef</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-5">add</span><span class="hl-0">&lt;</span><span class="hl-9">User</span><span class="hl-0">&gt;(</span><span class="hl-4">db</span><span class="hl-0">, </span><span class="hl-4">path</span><span class="hl-0">, </span><span class="hl-4">data</span><span class="hl-0">);</span><br/><span class="hl-0">    </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-1">`Document added with ID: </span><span class="hl-3">${</span><span class="hl-4">docRef</span><span class="hl-11">.</span><span class="hl-4">id</span><span class="hl-3">}</span><span class="hl-1">`</span><span class="hl-0">);</span><br/><span class="hl-0">  } </span><span class="hl-2">catch</span><span class="hl-0"> (</span><span class="hl-4">error</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">`Error adding document: </span><span class="hl-3">${</span><span class="hl-4">error</span><span class="hl-3">}</span><span class="hl-1">`</span><span class="hl-0">);</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-5">run</span><span class="hl-0">()</span>
 </code><button>Copy</button></pre>
-<a id="md:basic-structure-of-skeet-firestore" class="tsd-anchor"></a><h2><a href="#md:basic-structure-of-skeet-firestore">Basic Structure of Skeet Firestore</a></h2><p>Skeet Firestore retrieves, updates, and removes data nested in the following structure:</p>
-<pre><code class="language-typescript"><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">parentCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;Parent&#39;</span><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">childCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;Child&#39;</span><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">grandChildCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;GrandChild&#39;</span><br/><span class="hl-0">.</span><br/><span class="hl-0">.</span><br/><span class="hl-0">.</span><br/><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">doc</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> {</span><span class="hl-4">MethodName</span><span class="hl-0">}{</span><span class="hl-4">Relation</span><span class="hl-0">}</span><span class="hl-4">CollectionItem</span><span class="hl-0">&lt;..., </span><span class="hl-8">GrandChild</span><span class="hl-0">, </span><span class="hl-8">Child</span><span class="hl-0">, </span><span class="hl-8">Parent</span><span class="hl-0">&gt;(</span><br/><span class="hl-0">  </span><span class="hl-4">parentCollectionName</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">childCollectionName</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">grandChildCollectionName</span><span class="hl-0">,</span><br/><span class="hl-0">  ...,</span><br/><span class="hl-0">  </span><span class="hl-4">parentId</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">childId</span><span class="hl-0">,</span><br/><span class="hl-0">  ...,</span><br/><span class="hl-0">  {</span><span class="hl-4">Relation</span><span class="hl-0">}</span><span class="hl-4">Params</span><br/><span class="hl-0">  )</span>
+<a id="md:adds-collection-items" class="tsd-anchor"></a><h2><a href="#md:adds-collection-items">Adds Collection Items</a></h2><pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">firestore</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase-admin&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-3">*</span><span class="hl-0"> </span><span class="hl-2">as</span><span class="hl-0"> </span><span class="hl-4">admin</span><span class="hl-0"> </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;firebase-admin&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">adds</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@skeet-framework/firestor</span><span class="hl-7">e</span><br/><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">db</span><span class="hl-0"> = </span><span class="hl-4">admin</span><span class="hl-0">.</span><span class="hl-5">firestore</span><span class="hl-0">();</span><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">users</span><span class="hl-0">: </span><span class="hl-9">User</span><span class="hl-0">[] = [</span><br/><span class="hl-0">  { </span><span class="hl-4">name:</span><span class="hl-0"> </span><span class="hl-1">&quot;John Doe&quot;</span><span class="hl-0">, </span><span class="hl-4">age:</span><span class="hl-0"> </span><span class="hl-10">30</span><span class="hl-0"> },</span><br/><span class="hl-0">  { </span><span class="hl-4">name:</span><span class="hl-0"> </span><span class="hl-1">&quot;Jane Smith&quot;</span><span class="hl-0">, </span><span class="hl-4">age:</span><span class="hl-0"> </span><span class="hl-10">25</span><span class="hl-0"> },</span><br/><span class="hl-0">  </span><span class="hl-6">// ... more users ...</span><br/><span class="hl-0">]</span><br/><br/><span class="hl-3">async</span><span class="hl-0"> </span><span class="hl-3">function</span><span class="hl-0"> </span><span class="hl-5">run</span><span class="hl-0">() {</span><br/><span class="hl-0">  </span><span class="hl-2">try</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">path</span><span class="hl-0"> = </span><span class="hl-1">&#39;Users&#39;</span><br/><span class="hl-0">    </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">results</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-5">adds</span><span class="hl-0">&lt;</span><span class="hl-9">User</span><span class="hl-0">&gt;(</span><span class="hl-4">db</span><span class="hl-0">, </span><span class="hl-4">path</span><span class="hl-0">, </span><span class="hl-4">users</span><span class="hl-0">)</span><br/><span class="hl-0">    </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-1">`Added </span><span class="hl-3">${</span><span class="hl-4">users</span><span class="hl-11">.</span><span class="hl-4">length</span><span class="hl-3">}</span><span class="hl-1"> users in </span><span class="hl-3">${</span><span class="hl-4">results</span><span class="hl-11">.</span><span class="hl-4">length</span><span class="hl-3">}</span><span class="hl-1"> batches.`</span><span class="hl-0">)</span><br/><span class="hl-0">  } </span><span class="hl-2">catch</span><span class="hl-0"> (</span><span class="hl-4">error</span><span class="hl-0">) {</span><br/><span class="hl-0">    </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">error</span><span class="hl-0">(</span><span class="hl-1">`Error adding documents: </span><span class="hl-3">${</span><span class="hl-4">error</span><span class="hl-3">}</span><span class="hl-1">`</span><span class="hl-0">)</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-5">run</span><span class="hl-0">()</span>
 </code><button>Copy</button></pre>
-<a id="md:add-single-collectiondocument" class="tsd-anchor"></a><h3><a href="#md:add-single-collectiondocument">Add Single Collection/Document</a></h3><p>Autogenerate ID String</p>
-<pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">addCollectionItem</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@skeet-framework/firestore&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">User</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@/models/userModels.ts&#39;</span><br/><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-5">run</span><span class="hl-0"> = </span><span class="hl-3">async</span><span class="hl-0"> () </span><span class="hl-3">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">parentCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;User&#39;</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">params</span><span class="hl-0">: </span><span class="hl-7">User</span><span class="hl-0"> = {</span><br/><span class="hl-0">    </span><span class="hl-4">username:</span><span class="hl-0"> </span><span class="hl-1">&#39;Satoshi&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">docRef</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-5">addCollectionItem</span><span class="hl-0">&lt;</span><span class="hl-7">User</span><span class="hl-0">&gt;(</span><span class="hl-4">parentCollectionName</span><span class="hl-0">, </span><span class="hl-4">params</span><span class="hl-0">)</span><br/><span class="hl-0">  </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-1">&#39;User&#39;</span><span class="hl-0">, </span><span class="hl-4">docRef</span><span class="hl-0">)</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-5">run</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
-<p>Define Document ID</p>
-<pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">addCollectionItem</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@skeet-framework/firestore&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">User</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@/models/userModels.ts&#39;</span><br/><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-5">run</span><span class="hl-0"> = </span><span class="hl-3">async</span><span class="hl-0"> () </span><span class="hl-3">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">parentCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;User&#39;</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">params</span><span class="hl-0">: </span><span class="hl-7">User</span><span class="hl-0"> = {</span><br/><span class="hl-0">    </span><span class="hl-4">username:</span><span class="hl-0"> </span><span class="hl-1">&#39;Satoshi&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">uid</span><span class="hl-0"> = </span><span class="hl-1">&#39;uidstring&#39;</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">response</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-5">addCollectionItem</span><span class="hl-0">&lt;</span><span class="hl-7">User</span><span class="hl-0">&gt;(</span><br/><span class="hl-0">    </span><span class="hl-4">parentCollectionName</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">params</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">uid</span><br/><span class="hl-0">  )</span><br/><span class="hl-0">  </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-1">&#39;Ref&#39;</span><span class="hl-0">, </span><span class="hl-4">response</span><span class="hl-0">)</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-5">run</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
-<a id="md:create-child-collectiondocument" class="tsd-anchor"></a><h3><a href="#md:create-child-collectiondocument">Create Child Collection/Document</a></h3><pre><code class="language-typescript"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">addChildCollectionItem</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@skeet-framework/firestore&#39;</span><br/><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-4">User</span><span class="hl-0">, </span><span class="hl-4">UserChatRoom</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@/models/userModels.ts&#39;</span><br/><br/><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-5">run</span><span class="hl-0"> = </span><span class="hl-3">async</span><span class="hl-0"> () </span><span class="hl-3">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">parentCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;User&#39;</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">childCollectionName</span><span class="hl-0"> = </span><span class="hl-1">&#39;UserChatRoom&#39;</span><br/><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">params</span><span class="hl-0">: </span><span class="hl-7">User</span><span class="hl-0"> = {</span><br/><span class="hl-0">    </span><span class="hl-4">username:</span><span class="hl-0"> </span><span class="hl-1">&#39;Satoshi&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">parentDocRef</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-5">addCollectionItem</span><span class="hl-0">&lt;</span><span class="hl-7">User</span><span class="hl-0">&gt;(</span><span class="hl-4">parentCollectionName</span><span class="hl-0">, </span><span class="hl-4">params</span><span class="hl-0">)</span><br/><span class="hl-0">  </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-4">parentCollectionName</span><span class="hl-0">, </span><span class="hl-4">parentDocRef</span><span class="hl-0">)</span><br/><br/><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">childParams</span><span class="hl-0">: </span><span class="hl-7">UserChatRoom</span><span class="hl-0"> = {</span><br/><span class="hl-0">    </span><span class="hl-4">userRef:</span><span class="hl-0"> </span><span class="hl-4">response</span><span class="hl-0">.</span><span class="hl-4">ref</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">model:</span><span class="hl-0"> </span><span class="hl-1">&#39;gpt4&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">maxTokens:</span><span class="hl-0"> </span><span class="hl-9">100</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">temperature:</span><span class="hl-0"> </span><span class="hl-9">0.8</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">stream:</span><span class="hl-0"> </span><span class="hl-3">false</span><span class="hl-0">,</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-8">childDocRef</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-5">addChildCollectionItem</span><span class="hl-0">&lt;</span><span class="hl-7">UserChatRoom</span><span class="hl-0">, </span><span class="hl-7">User</span><span class="hl-0">&gt;(</span><br/><span class="hl-0">    </span><span class="hl-4">parentCollectionName</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">childCollectionName</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">parentDocRef</span><span class="hl-0">.</span><span class="hl-4">id</span><br/><span class="hl-0">    </span><span class="hl-4">childParams</span><br/><span class="hl-0">  )</span><br/><span class="hl-0">  </span><span class="hl-4">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-4">childCollectionName</span><span class="hl-0">, </span><span class="hl-4">childDocRef</span><span class="hl-0">)</span><br/><span class="hl-0">}</span>
-</code><button>Copy</button></pre>
-<a id="md:skeet-framework-document" class="tsd-anchor"></a><h2><a href="#md:skeet-framework-document">Skeet Framework Document</a></h2><ul>
-<li><p><a href="https://skeet.dev">https://skeet.dev</a></p>
-</li>
-<li><p><a href="https://skeet-framework.github.io">https://skeet-framework.github.io</a></p>
-</li>
+<a id="md:skeet-framework-document" class="tsd-anchor"></a><h1><a href="#md:skeet-framework-document">Skeet Framework Document</a></h1><ul>
+<li><a href="https://skeet.dev">https://skeet.dev</a></li>
 </ul>
-<a id="md:skeet-typescript-serverless-framework" class="tsd-anchor"></a><h2><a href="#md:skeet-typescript-serverless-framework">Skeet TypeScript Serverless Framework</a></h2><p>Firestore, Cloud Functions, TypeScript, Jest Test, Google Cloud Load Balancer, Cloud Armor</p>
-<a id="md:what39s-skeet" class="tsd-anchor"></a><h2><a href="#md:what39s-skeet">What&#39;s Skeet?</a></h2><p>TypeScript Serverless Framework &#39;Skeet&#39;.</p>
-<p>The Skeet project was launched with the goal of reducing software development, operation, and maintenance costs.</p>
-<p>Build Serverless Apps faster.
-Powered by TFirestore, Cloud Functions, Typesaurus, Jest, Prettier, and Google Cloud.</p>
-<a id="md:dependency" class="tsd-anchor"></a><h2><a href="#md:dependency">Dependency</a></h2><ul>
-<li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-<li><a href="https://nodejs.org/">Node</a></li>
-<li><a href="https://yarnpkg.com/">Yarn</a></li>
-<li><a href="https://cloud.google.com/sdk/docs">Google SDK</a></li>
-<li><a href="https://cli.github.com/">GitHub CLI</a></li>
-<li><a href="https://typesaurus.com/">Typesaurus</a></li>
-</ul>
-<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">npm</span><span class="hl-0"> </span><span class="hl-1">i</span><span class="hl-0"> </span><span class="hl-1">-g</span><span class="hl-0"> </span><span class="hl-1">@skeet-framework/cli</span><br/><span class="hl-0">$ </span><span class="hl-1">skeet</span><span class="hl-0"> </span><span class="hl-1">create</span><span class="hl-0"> </span><span class="hl-1">web-app</span>
-</code><button>Copy</button></pre>
-<a id="md:contributing" class="tsd-anchor"></a><h2><a href="#md:contributing">Contributing</a></h2><p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/elsoul/skeet">https://github.com/elsoul/skeet</a> This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
-<a id="md:license" class="tsd-anchor"></a><h2><a href="#md:license">License</a></h2><p>The package is available as open source under the terms of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0 License</a>.</p>
-<a id="md:code-of-conduct" class="tsd-anchor"></a><h2><a href="#md:code-of-conduct">Code of Conduct</a></h2><p>Everyone interacting in the SKEET project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/elsoul/skeet-cli/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<a id="md:contributing" class="tsd-anchor"></a><h1><a href="#md:contributing">Contributing</a></h1><p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/elsoul/skeet">https://github.com/elsoul/skeet</a> This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+<a id="md:license" class="tsd-anchor"></a><h1><a href="#md:license">License</a></h1><p>The package is available as open source under the terms of the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0 License</a>.</p>
+<a id="md:code-of-conduct" class="tsd-anchor"></a><h1><a href="#md:code-of-conduct">Code of Conduct</a></h1><p>Everyone interacting in the SKEET project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/elsoul/skeet-firestore/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
 </div></div>
 <div class="col-sidebar">
 <div class="page-menu">
@@ -245,42 +97,32 @@ Powered by TFirestore, Cloud Functions, Typesaurus, Jest, Prettier, and Google C
 <li><a href="#md:skeet-framework-plugin---firestore"><span>Skeet <wbr/>Framework <wbr/>Plugin -<wbr/> <wbr/>Firestore</span></a></li>
 <li><a href="#md:installation"><span>Installation</span></a></li>
 <li><a href="#md:skeet-firestore-docs"><span>Skeet <wbr/>Firestore <wbr/>Docs</span></a></li>
-<li>
-<ul>
 <li><a href="#md:features"><span>Features</span></a></li>
-<li><a href="#md:install"><span>Install</span></a></li>
 <li><a href="#md:usage"><span>Usage</span></a></li>
 <li>
 <ul>
 <li><a href="#md:initialize"><span>Initialize</span></a></li>
-<li><a href="#md:example-model"><span>Example <wbr/>Model</span></a></li></ul></li>
-<li><a href="#md:basic-structure-of-skeet-firestore"><span>Basic <wbr/>Structure of <wbr/>Skeet <wbr/>Firestore</span></a></li>
-<li>
-<ul>
-<li><a href="#md:add-single-collectiondocument"><span>Add <wbr/>Single <wbr/>Collection/<wbr/>Document</span></a></li>
-<li><a href="#md:create-child-collectiondocument"><span>Create <wbr/>Child <wbr/>Collection/<wbr/>Document</span></a></li></ul></li>
+<li><a href="#md:add-collection-item"><span>Add <wbr/>Collection <wbr/>Item</span></a></li>
+<li><a href="#md:adds-collection-items"><span>Adds <wbr/>Collection <wbr/>Items</span></a></li></ul></li>
 <li><a href="#md:skeet-framework-document"><span>Skeet <wbr/>Framework <wbr/>Document</span></a></li>
-<li><a href="#md:skeet-typescript-serverless-framework"><span>Skeet <wbr/>Type<wbr/>Script <wbr/>Serverless <wbr/>Framework</span></a></li>
-<li><a href="#md:what39s-skeet"><span>What&#39;s <wbr/>Skeet?</span></a></li>
-<li><a href="#md:dependency"><span>Dependency</span></a></li>
 <li><a href="#md:contributing"><span>Contributing</span></a></li>
 <li><a href="#md:license"><span>License</span></a></li>
-<li><a href="#md:code-of-conduct"><span>Code of <wbr/>Conduct</span></a></li></ul></li></ul></li></ul></div></details></div>
+<li><a href="#md:code-of-conduct"><span>Code of <wbr/>Conduct</span></a></li></ul></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4-path"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)" id="icon-4-text"></path></svg><span>@skeet-<wbr/>framework/firestore</span></a>
 <ul class="tsd-small-nested-navigation">
 <li><a href="classes/Timestamp.html" class="tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Timestamp</span></a></li>
-<li><a href="functions/addCollectionItem.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>add<wbr/>Collection<wbr/>Item</span></a></li>
-<li><a href="functions/addMultipleCollectionItems.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>add<wbr/>Multiple<wbr/>Collection<wbr/>Items</span></a></li>
+<li><a href="functions/add.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>add</span></a></li>
+<li><a href="functions/adds.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>adds</span></a></li>
 <li><a href="functions/createCollectionRef.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>create<wbr/>Collection<wbr/>Ref</span></a></li>
 <li><a href="functions/createDataRef.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>create<wbr/>Data<wbr/>Ref</span></a></li>
 <li><a href="functions/createFirestoreDataConverter.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>create<wbr/>Firestore<wbr/>Data<wbr/>Converter</span></a></li>
-<li><a href="functions/deleteCollectionItem.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>delete<wbr/>Collection<wbr/>Item</span></a></li>
-<li><a href="functions/getCollectionItem.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>get<wbr/>Collection<wbr/>Item</span></a></li>
+<li><a href="functions/delete.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>delete</span></a></li>
+<li><a href="functions/get.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>get</span></a></li>
 <li><a href="functions/getCollectionItemData.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>get<wbr/>Collection<wbr/>Item<wbr/>Data</span></a></li>
-<li><a href="functions/queryCollectionItems.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>query<wbr/>Collection<wbr/>Items</span></a></li>
+<li><a href="functions/query.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>query</span></a></li>
 <li><a href="functions/serverTimestamp.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>server<wbr/>Timestamp</span></a></li>
-<li><a href="functions/updateCollectionItem.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>update<wbr/>Collection<wbr/>Item</span></a></li></ul></nav></div></div></div>
+<li><a href="functions/update.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>update</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div></body></html>
