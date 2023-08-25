@@ -1,4 +1,5 @@
 import { createFirestoreDataConverter } from './createFirestoreDataConverter';
+import { serverTimestamp } from './serverTimestamp';
 /**
  * Updates the specified document in the provided Firestore collection with the given data.
  *
@@ -44,7 +45,7 @@ export const updateCollectionItem = async (db, collectionPath, docId, params) =>
             .collection(collectionPath)
             .doc(docId)
             .withConverter(createFirestoreDataConverter());
-        await docRef.update(params);
+        await docRef.update({ ...params, updatedAt: serverTimestamp() });
         return true;
     }
     catch (error) {

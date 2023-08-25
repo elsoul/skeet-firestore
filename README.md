@@ -47,6 +47,7 @@ $ yarn add @skeet-framework/firestore
 # Features
 
 All CRUD operations are supported with Firestore Converter.
+createdAt and updatedAt are automatically added to the document with Firebase ServerTimestamp.
 
 - [x] Add Collection Item
 - [x] Adds Collection Items

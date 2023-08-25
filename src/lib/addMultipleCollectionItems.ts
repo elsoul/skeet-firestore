@@ -1,6 +1,7 @@
 import { createCollectionRef } from './createCollectionRef'
 import { firestore } from 'firebase-admin'
 import * as admin from 'firebase-admin'
+import { serverTimestamp } from './serverTimestamp'
 
 /**
  * Adds multiple documents to the specified collection in Firestore.
@@ -62,7 +63,11 @@ export const addMultipleCollectionItems = async <
 
       chunk.forEach((item) => {
         const docRef = collectionRef.doc()
-        batch.set(docRef, item)
+        batch.set(docRef, {
+          ...item,
+          createdAt: serverTimestamp(),
+          updatedAt: serverTimestamp(),
+        })
       })
 
       const writeResults = await batch.commit()

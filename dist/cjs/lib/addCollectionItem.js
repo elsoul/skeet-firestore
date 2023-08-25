@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addCollectionItem = void 0;
 const createCollectionRef_1 = require("./createCollectionRef");
+const serverTimestamp_1 = require("./serverTimestamp");
 /**
  * Adds a new document to the specified collection in Firestore.
  *
@@ -41,7 +42,11 @@ const createCollectionRef_1 = require("./createCollectionRef");
 const addCollectionItem = async (db, collectionPath, params) => {
     try {
         const collectionRef = (0, createCollectionRef_1.createCollectionRef)(db, collectionPath);
-        const data = await collectionRef.add(params);
+        const data = await collectionRef.add({
+            ...params,
+            createdAt: (0, serverTimestamp_1.serverTimestamp)(),
+            updatedAt: (0, serverTimestamp_1.serverTimestamp)(),
+        });
         if (!data) {
             throw new Error('no data');
         }

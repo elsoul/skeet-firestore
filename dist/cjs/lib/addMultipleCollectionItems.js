@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addMultipleCollectionItems = void 0;
 const createCollectionRef_1 = require("./createCollectionRef");
+const serverTimestamp_1 = require("./serverTimestamp");
 /**
  * Adds multiple documents to the specified collection in Firestore.
  * This function supports batched writes, and if the number of items exceeds the maximum batch size (500),
@@ -51,7 +52,11 @@ const addMultipleCollectionItems = async (db, collectionPath, items) => {
             const collectionRef = (0, createCollectionRef_1.createCollectionRef)(db, collectionPath);
             chunk.forEach((item) => {
                 const docRef = collectionRef.doc();
-                batch.set(docRef, item);
+                batch.set(docRef, {
+                    ...item,
+                    createdAt: (0, serverTimestamp_1.serverTimestamp)(),
+                    updatedAt: (0, serverTimestamp_1.serverTimestamp)(),
+                });
             });
             const writeResults = await batch.commit();
             batchResults.push(writeResults);

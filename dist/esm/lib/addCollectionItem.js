@@ -1,4 +1,5 @@
 import { createCollectionRef } from './createCollectionRef';
+import { serverTimestamp } from './serverTimestamp';
 /**
  * Adds a new document to the specified collection in Firestore.
  *
@@ -38,7 +39,11 @@ import { createCollectionRef } from './createCollectionRef';
 export const addCollectionItem = async (db, collectionPath, params) => {
     try {
         const collectionRef = createCollectionRef(db, collectionPath);
-        const data = await collectionRef.add(params);
+        const data = await collectionRef.add({
+            ...params,
+            createdAt: serverTimestamp(),
+            updatedAt: serverTimestamp(),
+        });
         if (!data) {
             throw new Error('no data');
         }

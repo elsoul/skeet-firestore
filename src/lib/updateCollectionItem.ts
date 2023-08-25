@@ -1,6 +1,7 @@
 import { firestore } from 'firebase-admin'
 import * as admin from 'firebase-admin'
 import { createFirestoreDataConverter } from './createFirestoreDataConverter'
+import { serverTimestamp } from './serverTimestamp'
 
 /**
  * Updates the specified document in the provided Firestore collection with the given data.
@@ -52,7 +53,7 @@ export const updateCollectionItem = async <T extends firestore.DocumentData>(
       .collection(collectionPath)
       .doc(docId)
       .withConverter(createFirestoreDataConverter<T>())
-    await docRef.update(params)
+    await docRef.update({ ...params, updatedAt: serverTimestamp() })
     return true
   } catch (error) {
     throw new Error(`Error updating document with ID ${docId}: ${error}`)

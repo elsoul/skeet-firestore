@@ -1,4 +1,5 @@
 import { createCollectionRef } from './createCollectionRef';
+import { serverTimestamp } from './serverTimestamp';
 /**
  * Adds multiple documents to the specified collection in Firestore.
  * This function supports batched writes, and if the number of items exceeds the maximum batch size (500),
@@ -48,7 +49,11 @@ export const addMultipleCollectionItems = async (db, collectionPath, items) => {
             const collectionRef = createCollectionRef(db, collectionPath);
             chunk.forEach((item) => {
                 const docRef = collectionRef.doc();
-                batch.set(docRef, item);
+                batch.set(docRef, {
+                    ...item,
+                    createdAt: serverTimestamp(),
+                    updatedAt: serverTimestamp(),
+                });
             });
             const writeResults = await batch.commit();
             batchResults.push(writeResults);

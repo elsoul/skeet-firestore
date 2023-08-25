@@ -1,6 +1,7 @@
 import { createCollectionRef } from './createCollectionRef'
 import { firestore } from 'firebase-admin'
 import * as admin from 'firebase-admin'
+import { serverTimestamp } from './serverTimestamp'
 
 /**
  * Adds a new document to the specified collection in Firestore.
@@ -45,7 +46,12 @@ export const addCollectionItem = async <T extends firestore.DocumentData>(
 ) => {
   try {
     const collectionRef = createCollectionRef<T>(db, collectionPath)
-    const data = await collectionRef.add(params)
+
+    const data = await collectionRef.add({
+      ...params,
+      createdAt: serverTimestamp(),
+      updatedAt: serverTimestamp(),
+    })
     if (!data) {
       throw new Error('no data')
     }
