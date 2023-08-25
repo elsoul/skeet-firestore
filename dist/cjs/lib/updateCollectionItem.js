@@ -18,7 +18,7 @@ const createFirestoreDataConverter_1 = require("./createFirestoreDataConverter")
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { update } from '@skeet-framework/firestore
+ * import { update } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  * const updatedData: firestore.UpdateData<User> = {

@@ -17,7 +17,7 @@ const createCollectionRef_1 = require("./createCollectionRef");
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { add } from '@skeet-framework/firestore
+ * import { add } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  * const data: User = {

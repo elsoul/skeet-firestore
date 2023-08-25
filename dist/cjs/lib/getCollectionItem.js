@@ -14,7 +14,7 @@ exports.getCollectionItem = void 0;
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { add, get } from '@skeet-framework/firestore
+ * import { add, get } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  *

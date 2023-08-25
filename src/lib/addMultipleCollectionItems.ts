@@ -19,7 +19,7 @@ import * as admin from 'firebase-admin'
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { adds } from '@skeet-framework/firestore
+ * import { adds } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  * const users: User[] = [

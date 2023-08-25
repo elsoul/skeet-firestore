@@ -81,21 +81,21 @@ firebase.initializeApp({
 ```ts
 import { firestore } from 'firebase-admin'
 import * as admin from 'firebase-admin'
-import { add } from '@skeet-framework/firestore
+import { add } from '@skeet-framework/firestore'
 
-const db = admin.firestore();
+const db = admin.firestore()
 const data: User = {
-  name: "John Doe",
-  age: 30
+  name: 'John Doe',
+  age: 30,
 }
 
 async function run() {
   try {
     const path = 'Users'
-    const docRef = await add<User>(db, path, data);
-    console.log(`Document added with ID: ${docRef.id}`);
+    const docRef = await add<User>(db, path, data)
+    console.log(`Document added with ID: ${docRef.id}`)
   } catch (error) {
-    console.error(`Error adding document: ${error}`);
+    console.error(`Error adding document: ${error}`)
   }
 }
 
@@ -107,12 +107,12 @@ run()
 ```ts
 import { firestore } from 'firebase-admin'
 import * as admin from 'firebase-admin'
-import { adds } from '@skeet-framework/firestore
+import { adds } from '@skeet-framework/firestore'
 
-const db = admin.firestore();
+const db = admin.firestore()
 const users: User[] = [
-  { name: "John Doe", age: 30 },
-  { name: "Jane Smith", age: 25 },
+  { name: 'John Doe', age: 30 },
+  { name: 'Jane Smith', age: 25 },
   // ... more users ...
 ]
 

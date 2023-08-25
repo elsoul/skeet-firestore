@@ -27,7 +27,7 @@ export type QueryCondition = {
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { query } from '@skeet-framework/firestore
+ * import { query } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  * const conditions: QueryCondition[] = [

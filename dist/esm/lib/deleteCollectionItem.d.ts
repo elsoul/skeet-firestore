@@ -15,7 +15,7 @@ import * as admin from 'firebase-admin';
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { delete } from '@skeet-framework/firestore
+ * import { delete } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  *
