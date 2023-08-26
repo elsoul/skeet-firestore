@@ -19,7 +19,6 @@ __exportStar(require("./createDataRef"), exports);
 __exportStar(require("./createFirestoreDataConverter"), exports);
 __exportStar(require("./serverTimestamp"), exports);
 __exportStar(require("./getCollectionItem"), exports);
-__exportStar(require("./getCollectionItemData"), exports);
 __exportStar(require("./createCollectionRef"), exports);
 __exportStar(require("./addMultipleCollectionItems"), exports);
 __exportStar(require("./queryCollectionItems"), exports);

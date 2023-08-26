@@ -34,7 +34,10 @@
  * run();
  * ```
  */
-export const getCollectionItem = async (dataRef) => {
+export const getCollectionItem = async (db, docId, collectionPath) => {
+    const dataRef = db
+        .collection(collectionPath)
+        .doc(docId);
     const doc = await dataRef.get();
     if (!doc.exists) {
         throw new Error('Document not found at path: ' + dataRef.path);

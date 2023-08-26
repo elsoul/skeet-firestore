@@ -2,7 +2,6 @@ export {
   createDataRef,
   createFirestoreDataConverter,
   getCollectionItem as get,
-  getCollectionItemData,
   serverTimestamp,
   addCollectionItem as add,
   createCollectionRef,
