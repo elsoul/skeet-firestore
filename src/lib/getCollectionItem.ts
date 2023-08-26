@@ -26,7 +26,7 @@ import * as admin from 'firebase-admin'
  *     };
  *     const path = 'Users'
  *     const docRef = await add<User>(db, path, data);
- *     const user = await get<User>(docRef.id);
+ *     const user = await get<User>(db, path, docRef.id);
  *     console.log(`Retrieved user: ${user.name}, age: ${user.age}`);
  *   } catch (error) {
  *     console.error(`Error retrieving document: ${error}`);
@@ -38,8 +38,8 @@ import * as admin from 'firebase-admin'
  */
 export const getCollectionItem = async <T>(
   db: admin.firestore.Firestore,
-  docId: string,
-  collectionPath: string
+  collectionPath: string,
+  docId: string
 ): Promise<T> => {
   const dataRef = db
     .collection(collectionPath)

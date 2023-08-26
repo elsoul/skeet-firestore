@@ -27,7 +27,7 @@ exports.getCollectionItem = void 0;
  *     };
  *     const path = 'Users'
  *     const docRef = await add<User>(db, path, data);
- *     const user = await get<User>(docRef.id);
+ *     const user = await get<User>(db, path, docRef.id);
  *     console.log(`Retrieved user: ${user.name}, age: ${user.age}`);
  *   } catch (error) {
  *     console.error(`Error retrieving document: ${error}`);
@@ -37,7 +37,7 @@ exports.getCollectionItem = void 0;
  * run();
  * ```
  */
-const getCollectionItem = async (db, docId, collectionPath) => {
+const getCollectionItem = async (db, collectionPath, docId) => {
     const dataRef = db
         .collection(collectionPath)
         .doc(docId);
