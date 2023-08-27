@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateCollectionItem = void 0;
 const createFirestoreDataConverter_1 = require("./createFirestoreDataConverter");
-const serverTimestamp_1 = require("./serverTimestamp");
+const firestore_1 = require("firebase/firestore");
 /**
  * Updates the specified document in the provided Firestore collection with the given data.
  *
@@ -18,10 +18,9 @@ const serverTimestamp_1 = require("./serverTimestamp");
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { update } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const updatedData: firestore.UpdateData<User> = {
  *   age: 31
  * };
@@ -48,7 +47,7 @@ const updateCollectionItem = async (db, collectionPath, docId, params) => {
             .collection(collectionPath)
             .doc(docId)
             .withConverter((0, createFirestoreDataConverter_1.createFirestoreDataConverter)());
-        await docRef.update({ ...params, updatedAt: (0, serverTimestamp_1.serverTimestamp)() });
+        await docRef.update({ ...params, updatedAt: (0, firestore_1.serverTimestamp)() });
         return true;
     }
     catch (error) {

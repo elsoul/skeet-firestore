@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin';
-import * as admin from 'firebase-admin';
 /**
  * Represents a condition for querying Firestore collections.
  */
@@ -25,10 +24,8 @@ type QueryCondition = {
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { query } from '@skeet-framework/firestore'
- *
- * const db = admin.firestore();
+ * const db = firestore();
  *
  * // Simple query to get users over 25 years old
  * const simpleConditions: QueryCondition[] = [
@@ -71,5 +68,5 @@ type QueryCondition = {
  * run();
  * ```
  */
-export declare const queryCollectionItems: <T extends firestore.DocumentData>(db: admin.firestore.Firestore, collectionPath: string, conditions: QueryCondition[]) => Promise<T[]>;
+export declare const queryCollectionItems: <T extends firestore.DocumentData>(db: firestore.Firestore, collectionPath: string, conditions: QueryCondition[]) => Promise<T[]>;
 export {};

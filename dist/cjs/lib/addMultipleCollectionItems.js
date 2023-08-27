@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addMultipleCollectionItems = void 0;
 const createCollectionRef_1 = require("./createCollectionRef");
-const serverTimestamp_1 = require("./serverTimestamp");
+const firestore_1 = require("firebase/firestore");
 /**
  * Adds multiple documents to the specified collection in Firestore.
  * This function supports batched writes, and if the number of items exceeds the maximum batch size (500),
@@ -19,10 +19,9 @@ const serverTimestamp_1 = require("./serverTimestamp");
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { adds } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const users: User[] = [
  *   { name: "John Doe", age: 30 },
  *   { name: "Jane Smith", age: 25 },
@@ -54,8 +53,8 @@ const addMultipleCollectionItems = async (db, collectionPath, items) => {
                 const docRef = collectionRef.doc();
                 batch.set(docRef, {
                     ...item,
-                    createdAt: (0, serverTimestamp_1.serverTimestamp)(),
-                    updatedAt: (0, serverTimestamp_1.serverTimestamp)(),
+                    createdAt: (0, firestore_1.serverTimestamp)(),
+                    updatedAt: (0, firestore_1.serverTimestamp)(),
                 });
             });
             const writeResults = await batch.commit();

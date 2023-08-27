@@ -17,7 +17,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./addCollectionItem"), exports);
 __exportStar(require("./createDataRef"), exports);
 __exportStar(require("./createFirestoreDataConverter"), exports);
-__exportStar(require("./serverTimestamp"), exports);
 __exportStar(require("./getCollectionItem"), exports);
 __exportStar(require("./createCollectionRef"), exports);
 __exportStar(require("./addMultipleCollectionItems"), exports);
