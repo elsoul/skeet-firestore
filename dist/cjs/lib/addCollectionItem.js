@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addCollectionItem = void 0;
 const createCollectionRef_1 = require("./createCollectionRef");
-const firestore_1 = require("firebase/firestore");
+const serverTimestamp_1 = require("./serverTimestamp");
 /**
  * Adds a new document to the specified collection in Firestore. If an ID is provided, the document will be set with that ID; otherwise, an ID will be automatically generated.
  *
@@ -52,16 +52,16 @@ const addCollectionItem = async (db, collectionPath, params, id) => {
             const docRef = collectionRef.doc(id);
             await docRef.set({
                 ...params,
-                createdAt: (0, firestore_1.serverTimestamp)(),
-                updatedAt: (0, firestore_1.serverTimestamp)(),
+                createdAt: (0, serverTimestamp_1.serverTimestamp)(),
+                updatedAt: (0, serverTimestamp_1.serverTimestamp)(),
             });
             return docRef;
         }
         else {
             const data = await collectionRef.add({
                 ...params,
-                createdAt: (0, firestore_1.serverTimestamp)(),
-                updatedAt: (0, firestore_1.serverTimestamp)(),
+                createdAt: (0, serverTimestamp_1.serverTimestamp)(),
+                updatedAt: (0, serverTimestamp_1.serverTimestamp)(),
             });
             if (!data) {
                 throw new Error('no data');

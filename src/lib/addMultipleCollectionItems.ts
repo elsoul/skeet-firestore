@@ -1,6 +1,6 @@
 import { createCollectionRef } from './createCollectionRef'
 import { firestore } from 'firebase-admin'
-import { serverTimestamp } from 'firebase/firestore'
+import { serverTimestamp } from './serverTimestamp'
 
 /**
  * Adds multiple documents to the specified collection in Firestore.

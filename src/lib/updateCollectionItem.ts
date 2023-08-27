@@ -1,6 +1,6 @@
 import { firestore } from 'firebase-admin'
 import { createFirestoreDataConverter } from './createFirestoreDataConverter'
-import { serverTimestamp } from 'firebase/firestore'
+import { serverTimestamp } from './serverTimestamp'
 
 /**
  * Updates the specified document in the provided Firestore collection with the given data.

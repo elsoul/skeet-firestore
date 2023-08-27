@@ -1,6 +1,6 @@
 import { createCollectionRef } from './createCollectionRef'
 import { firestore } from 'firebase-admin'
-import { serverTimestamp } from 'firebase/firestore'
+import { serverTimestamp } from './serverTimestamp'
 
 /**
  * Adds a new document to the specified collection in Firestore. If an ID is provided, the document will be set with that ID; otherwise, an ID will be automatically generated.
