@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin';
-import * as admin from 'firebase-admin';
 /**
  * Adds a new document to the specified collection in Firestore. If an ID is provided, the document will be set with that ID; otherwise, an ID will be automatically generated.
  *
@@ -15,10 +14,9 @@ import * as admin from 'firebase-admin';
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { add } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const data: User = {
  *   name: "John Doe",
  *   age: 30
@@ -43,4 +41,4 @@ import * as admin from 'firebase-admin';
  * run();
  * ```
  */
-export declare const addCollectionItem: <T extends firestore.DocumentData>(db: admin.firestore.Firestore, collectionPath: string, params: T, id?: string) => Promise<firestore.DocumentReference<T>>;
+export declare const addCollectionItem: <T extends firestore.DocumentData>(db: firestore.Firestore, collectionPath: string, params: T, id?: string) => Promise<firestore.DocumentReference<T>>;

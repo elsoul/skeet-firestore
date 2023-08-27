@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin';
-import * as admin from 'firebase-admin';
 /**
  * Deletes a document from the specified collection in Firestore.
  *
@@ -35,4 +34,4 @@ import * as admin from 'firebase-admin';
  * run();
  * ```
  */
-export declare const deleteCollectionItem: (db: admin.firestore.Firestore, collectionPath: string, docId: string) => Promise<boolean>;
+export declare const deleteCollectionItem: (db: firestore.Firestore, collectionPath: string, docId: string) => Promise<boolean>;

@@ -1,5 +1,5 @@
 import { createFirestoreDataConverter } from './createFirestoreDataConverter';
-import { serverTimestamp } from './serverTimestamp';
+import { serverTimestamp } from 'firebase/firestore';
 /**
  * Updates the specified document in the provided Firestore collection with the given data.
  *
@@ -15,10 +15,9 @@ import { serverTimestamp } from './serverTimestamp';
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { update } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const updatedData: firestore.UpdateData<User> = {
  *   age: 31
  * };
