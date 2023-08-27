@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateCollectionItem = void 0;
 const createFirestoreDataConverter_1 = require("./createFirestoreDataConverter");
-const firestore_1 = require("firebase/firestore");
+const serverTimestamp_1 = require("./serverTimestamp");
 /**
  * Updates the specified document in the provided Firestore collection with the given data.
  *
@@ -47,7 +47,7 @@ const updateCollectionItem = async (db, collectionPath, docId, params) => {
             .collection(collectionPath)
             .doc(docId)
             .withConverter((0, createFirestoreDataConverter_1.createFirestoreDataConverter)());
-        await docRef.update({ ...params, updatedAt: (0, firestore_1.serverTimestamp)() });
+        await docRef.update({ ...params, updatedAt: (0, serverTimestamp_1.serverTimestamp)() });
         return true;
     }
     catch (error) {

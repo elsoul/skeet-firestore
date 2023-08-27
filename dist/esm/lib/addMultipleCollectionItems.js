@@ -1,5 +1,5 @@
 import { createCollectionRef } from './createCollectionRef';
-import { serverTimestamp } from 'firebase/firestore';
+import { serverTimestamp } from './serverTimestamp';
 /**
  * Adds multiple documents to the specified collection in Firestore.
  * This function supports batched writes, and if the number of items exceeds the maximum batch size (500),
