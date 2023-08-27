@@ -1,9 +1,9 @@
 import { firestore } from 'firebase-admin'
-import * as admin from 'firebase-admin'
 import { createFirestoreDataConverter } from './createFirestoreDataConverter'
+import { DocumentData } from 'firebase/firestore'
 
-export const createCollectionRef = <T extends firestore.DocumentData>(
-  db: admin.firestore.Firestore,
+export const createCollectionRef = <T extends DocumentData>(
+  db: firestore.Firestore,
   collectionPath: string
 ) => {
   return db

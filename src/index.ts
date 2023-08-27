@@ -2,7 +2,6 @@ export {
   createDataRef,
   createFirestoreDataConverter,
   getCollectionItem as get,
-  serverTimestamp,
   addCollectionItem as add,
   createCollectionRef,
   addMultipleCollectionItems as adds,
@@ -10,4 +9,4 @@ export {
   updateCollectionItem as update,
   deleteCollectionItem as delete,
 } from './lib'
-export { Timestamp } from '@google-cloud/firestore'
+export { Timestamp, FieldValue, serverTimestamp } from 'firebase/firestore'
