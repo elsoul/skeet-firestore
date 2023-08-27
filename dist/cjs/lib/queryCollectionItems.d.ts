@@ -3,10 +3,12 @@ import * as admin from 'firebase-admin';
 /**
  * Represents a condition for querying Firestore collections.
  */
-export type QueryCondition = {
-    field: string;
-    operator: firestore.WhereFilterOp;
-    value: any;
+type QueryCondition = {
+    field?: string;
+    operator?: firestore.WhereFilterOp;
+    value?: any;
+    orderDirection?: firestore.OrderByDirection;
+    limit?: number;
 };
 /**
  * Queries the specified collection in Firestore based on the provided conditions
@@ -27,15 +29,40 @@ export type QueryCondition = {
  * import { query } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
- * const conditions: QueryCondition[] = [
+ *
+ * // Simple query to get users over 25 years old
+ * const simpleConditions: QueryCondition[] = [
  *   { field: "age", operator: ">", value: 25 }
+ * ];
+ *
+ * // Advanced query to get users over 25 years old, ordered by their names
+ * const advancedConditions: QueryCondition[] = [
+ *   { field: "age", operator: ">", value: 25 },
+ *   { field: "name", orderDirection: "asc" }
+ * ];
+ *
+ * // Query to get users over 25 years old and limit the results to 5
+ * const limitedConditions: QueryCondition[] = [
+ *   { field: "age", operator: ">", value: 25 },
+ *   { limit: 5 }
  * ];
  *
  * async function run() {
  *   try {
- *     const path = 'Users'
- *     const users = await query<User>(db, path, conditions);
- *     console.log(`Found ${users.length} users over 25 years old.`);
+ *     const path = 'Users';
+ *
+ *     // Using the simple conditions
+ *     const usersByAge = await query<User>(db, path, simpleConditions);
+ *     console.log(`Found ${usersByAge.length} users over 25 years old.`);
+ *
+ *     // Using the advanced conditions
+ *     const orderedUsers = await query<User>(db, path, advancedConditions);
+ *     console.log(`Found ${orderedUsers.length} users over 25 years old, ordered by name.`);
+ *
+ *     // Using the limited conditions
+ *     const limitedUsers = await query<User>(db, path, limitedConditions);
+ *     console.log(`Found ${limitedUsers.length} users over 25 years old, limited to 5.`);
+ *
  *   } catch (error) {
  *     console.error(`Error querying collection: ${error}`);
  *   }
@@ -45,3 +72,4 @@ export type QueryCondition = {
  * ```
  */
 export declare const queryCollectionItems: <T extends firestore.DocumentData>(db: admin.firestore.Firestore, collectionPath: string, conditions: QueryCondition[]) => Promise<T[]>;
+export {};

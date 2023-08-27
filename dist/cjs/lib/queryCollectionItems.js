@@ -21,15 +21,40 @@ const createFirestoreDataConverter_1 = require("./createFirestoreDataConverter")
  * import { query } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
- * const conditions: QueryCondition[] = [
+ *
+ * // Simple query to get users over 25 years old
+ * const simpleConditions: QueryCondition[] = [
  *   { field: "age", operator: ">", value: 25 }
+ * ];
+ *
+ * // Advanced query to get users over 25 years old, ordered by their names
+ * const advancedConditions: QueryCondition[] = [
+ *   { field: "age", operator: ">", value: 25 },
+ *   { field: "name", orderDirection: "asc" }
+ * ];
+ *
+ * // Query to get users over 25 years old and limit the results to 5
+ * const limitedConditions: QueryCondition[] = [
+ *   { field: "age", operator: ">", value: 25 },
+ *   { limit: 5 }
  * ];
  *
  * async function run() {
  *   try {
- *     const path = 'Users'
- *     const users = await query<User>(db, path, conditions);
- *     console.log(`Found ${users.length} users over 25 years old.`);
+ *     const path = 'Users';
+ *
+ *     // Using the simple conditions
+ *     const usersByAge = await query<User>(db, path, simpleConditions);
+ *     console.log(`Found ${usersByAge.length} users over 25 years old.`);
+ *
+ *     // Using the advanced conditions
+ *     const orderedUsers = await query<User>(db, path, advancedConditions);
+ *     console.log(`Found ${orderedUsers.length} users over 25 years old, ordered by name.`);
+ *
+ *     // Using the limited conditions
+ *     const limitedUsers = await query<User>(db, path, limitedConditions);
+ *     console.log(`Found ${limitedUsers.length} users over 25 years old, limited to 5.`);
+ *
  *   } catch (error) {
  *     console.error(`Error querying collection: ${error}`);
  *   }
@@ -44,7 +69,17 @@ const queryCollectionItems = async (db, collectionPath, conditions) => {
             .collection(collectionPath)
             .withConverter((0, createFirestoreDataConverter_1.createFirestoreDataConverter)());
         for (const condition of conditions) {
-            query = query.where(condition.field, condition.operator, condition.value);
+            if (condition.field &&
+                condition.operator &&
+                condition.value !== undefined) {
+                query = query.where(condition.field, condition.operator, condition.value);
+            }
+            if (condition.field && condition.orderDirection) {
+                query = query.orderBy(condition.field, condition.orderDirection);
+            }
+            if (condition.limit !== undefined) {
+                query = query.limit(condition.limit);
+            }
         }
         const snapshot = await query.get();
         return snapshot.docs.map((doc) => ({
