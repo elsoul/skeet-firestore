@@ -13,23 +13,19 @@ import * as admin from 'firebase-admin'
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { add, get } from '@skeet-framework/firestore'
+ * import { get } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  *
  * async function run() {
  *   try {
  *     const db = admin.firestore();
- *     const data: User = {
- *       name: "John Doe",
- *       age: 30
- *     };
  *     const path = 'Users'
- *     const docRef = await add<User>(db, path, data);
- *     const user = await get<User>(db, path, docRef.id);
- *     console.log(`Retrieved user: ${user.name}, age: ${user.age}`);
+ *     const id = 'user123'
+ *     const user = await get<User>(db, path, id)
+ *     console.log(`Retrieved user: ${user.name}, age: ${user.age}`)
  *   } catch (error) {
- *     console.error(`Error retrieving document: ${error}`);
+ *     console.error(`Error retrieving document: ${error}`)
  *   }
  * }
  *

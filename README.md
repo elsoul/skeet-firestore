@@ -51,10 +51,10 @@ createdAt and updatedAt are automatically added to the document with Firebase Se
 
 - [x] Add Collection Item
 - [x] Adds Collection Items
-- [x] Update Collection Item
-- [x] Delete Collection Item
 - [x] Get Collection Item
 - [x] Query Collection Items
+- [x] Update Collection Item
+- [x] Delete Collection Item
 
 # Usage
 
@@ -130,6 +130,130 @@ async function run() {
 run()
 ```
 
+## Get Collection Item
+
+```ts
+import { firestore } from 'firebase-admin'
+import * as admin from 'firebase-admin'
+import { get } from '@skeet-framework/firestore'
+
+const db = admin.firestore()
+async function run() {
+  try {
+    const path = 'Users'
+    const docId = 'user123'
+    const user = await get<User>(db, path, docId)
+    console.log(`User: ${JSON.stringify(user)}`)
+  } catch (error) {
+    console.error(`Error getting document: ${error}`)
+  }
+}
+
+run()
+```
+
+## Query Collection Items
+
+```typescript
+import { firestore } from 'firebase-admin'
+import * as admin from 'firebase-admin'
+import { query } from '@skeet-framework/firestore'
+
+const db = admin.firestore()
+
+// Simple query to get users over 25 years old
+const simpleConditions: QueryCondition[] = [
+  { field: 'age', operator: '>', value: 25 },
+]
+
+// Advanced query to get users over 25 years old, ordered by their names
+const advancedConditions: QueryCondition[] = [
+  { field: 'age', operator: '>', value: 25 },
+  { field: 'name', orderDirection: 'asc' },
+]
+
+// Query to get users over 25 years old and limit the results to 5
+const limitedConditions: QueryCondition[] = [
+  { field: 'age', operator: '>', value: 25 },
+  { limit: 5 },
+]
+
+async function run() {
+  try {
+    const path = 'Users'
+
+    // Using the simple conditions
+    const usersByAge = await query<User>(db, path, simpleConditions)
+    console.log(`Found ${usersByAge.length} users over 25 years old.`)
+
+    // Using the advanced conditions
+    const orderedUsers = await query<User>(db, path, advancedConditions)
+    console.log(
+      `Found ${orderedUsers.length} users over 25 years old, ordered by name.`
+    )
+
+    // Using the limited conditions
+    const limitedUsers = await query<User>(db, path, limitedConditions)
+    console.log(
+      `Found ${limitedUsers.length} users over 25 years old, limited to 5.`
+    )
+  } catch (error) {
+    console.error(`Error querying collection: ${error}`)
+  }
+}
+
+run()
+```
+
+## Update Collection Item
+
+```ts
+import { firestore } from 'firebase-admin'
+import * as admin from 'firebase-admin'
+import { update } from '@skeet-framework/firestore'
+
+const db = admin.firestore()
+const updatedData: User = {
+  age: 38,
+}
+
+async function run() {
+  try {
+    const path = 'Users'
+    const docId = '123456'
+    const success = await update<User>(db, path, docId, updatedData)
+    if (success) {
+      console.log(`Document with ID ${docId} updated successfully.`)
+    }
+  } catch (error) {
+    console.error(`Error updating document: ${error}`)
+  }
+}
+
+run()
+```
+
+## Delete Collection Item
+
+```ts
+import { firestore } from 'firebase-admin'
+import * as admin from 'firebase-admin'
+import { delete } from '@skeet-framework/firestore'
+
+async function run() {
+  try {
+    const path = 'Users'
+    const docId = '123456'
+    const success = await delete(db, path, docId)
+    if (success) {
+      console.log(`Document with ID ${docId} deleted successfully.`)
+    }
+  } catch (error) {
+    console.error(`Error deleting document: ${error}`)
+  }
+}
+```
+
 # Skeet Framework Document
 
 - [https://skeet.dev](https://skeet.dev)
@@ -145,3 +269,7 @@ The package is available as open source under the terms of the [Apache-2.0 Licen
 # Code of Conduct
 
 Everyone interacting in the SKEET project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/elsoul/skeet-firestore/blob/master/CODE_OF_CONDUCT.md).
+
+```
+
+```
