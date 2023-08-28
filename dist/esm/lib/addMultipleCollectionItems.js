@@ -16,10 +16,9 @@ import { serverTimestamp } from './serverTimestamp';
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { adds } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const users: User[] = [
  *   { name: "John Doe", age: 30 },
  *   { name: "Jane Smith", age: 25 },

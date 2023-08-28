@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin';
-import * as admin from 'firebase-admin';
 /**
  * Adds multiple documents to the specified collection in Firestore.
  * This function supports batched writes, and if the number of items exceeds the maximum batch size (500),
@@ -16,10 +15,9 @@ import * as admin from 'firebase-admin';
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { adds } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const users: User[] = [
  *   { name: "John Doe", age: 30 },
  *   { name: "Jane Smith", age: 25 },
@@ -39,4 +37,4 @@ import * as admin from 'firebase-admin';
  * run();
  * ```
  */
-export declare const addMultipleCollectionItems: <T extends firestore.DocumentData>(db: admin.firestore.Firestore, collectionPath: string, items: T[]) => Promise<firestore.WriteResult[][]>;
+export declare const addMultipleCollectionItems: <T extends firestore.DocumentData>(db: firestore.Firestore, collectionPath: string, items: T[]) => Promise<firestore.WriteResult[][]>;

@@ -1,6 +1,5 @@
 import { createCollectionRef } from './createCollectionRef'
 import { firestore } from 'firebase-admin'
-import * as admin from 'firebase-admin'
 import { serverTimestamp } from './serverTimestamp'
 
 /**
@@ -19,10 +18,9 @@ import { serverTimestamp } from './serverTimestamp'
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { adds } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const users: User[] = [
  *   { name: "John Doe", age: 30 },
  *   { name: "Jane Smith", age: 25 },
@@ -45,7 +43,7 @@ import { serverTimestamp } from './serverTimestamp'
 export const addMultipleCollectionItems = async <
   T extends firestore.DocumentData
 >(
-  db: admin.firestore.Firestore,
+  db: firestore.Firestore,
   collectionPath: string,
   items: T[]
 ): Promise<firestore.WriteResult[][]> => {

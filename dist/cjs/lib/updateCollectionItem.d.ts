@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin';
-import * as admin from 'firebase-admin';
 /**
  * Updates the specified document in the provided Firestore collection with the given data.
  *
@@ -15,10 +14,9 @@ import * as admin from 'firebase-admin';
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { update } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const updatedData: firestore.UpdateData<User> = {
  *   age: 31
  * };
@@ -39,4 +37,4 @@ import * as admin from 'firebase-admin';
  * run();
  * ```
  */
-export declare const updateCollectionItem: <T extends firestore.DocumentData>(db: admin.firestore.Firestore, collectionPath: string, docId: string, params: firestore.UpdateData<T>) => Promise<boolean>;
+export declare const updateCollectionItem: <T extends firestore.DocumentData>(db: firestore.Firestore, collectionPath: string, docId: string, params: firestore.UpdateData<T>) => Promise<boolean>;

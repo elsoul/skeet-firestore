@@ -25,6 +25,7 @@
 
 Skeet Firestore Plugin for CRUD Firestore operation with Firestore Converter.
 Type safe, easy to use, and easy to test.
+This plugin is for serverside with Firebase Admin SDK.
 
 # Installation
 
@@ -66,25 +67,13 @@ import * as admin from 'firebase-admin'
 admin.initializeApp()
 ```
 
-or
-
-```typescript
-import * as firebase from 'firebase/app'
-import 'firebase/firestore'
-
-firebase.initializeApp({
-  // Project configuration
-})
-```
-
 ## Add Collection Item
 
 ```ts
 import { firestore } from 'firebase-admin'
-import * as admin from 'firebase-admin'
 import { add } from '@skeet-framework/firestore'
 
-const db = admin.firestore()
+const db = firestore()
 const data: User = {
   name: 'John Doe',
   age: 30,
@@ -107,10 +96,9 @@ run()
 
 ```ts
 import { firestore } from 'firebase-admin'
-import * as admin from 'firebase-admin'
 import { adds } from '@skeet-framework/firestore'
 
-const db = admin.firestore()
+const db = firestore()
 const users: User[] = [
   { name: 'John Doe', age: 30 },
   { name: 'Jane Smith', age: 25 },
@@ -269,7 +257,3 @@ The package is available as open source under the terms of the [Apache-2.0 Licen
 # Code of Conduct
 
 Everyone interacting in the SKEET project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/elsoul/skeet-firestore/blob/master/CODE_OF_CONDUCT.md).
-
-```
-
-```

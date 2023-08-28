@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin'
-import * as admin from 'firebase-admin'
 import { createFirestoreDataConverter } from './createFirestoreDataConverter'
 import { serverTimestamp } from './serverTimestamp'
 
@@ -18,10 +17,9 @@ import { serverTimestamp } from './serverTimestamp'
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { update } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const updatedData: firestore.UpdateData<User> = {
  *   age: 31
  * };
@@ -43,7 +41,7 @@ import { serverTimestamp } from './serverTimestamp'
  * ```
  */
 export const updateCollectionItem = async <T extends firestore.DocumentData>(
-  db: admin.firestore.Firestore,
+  db: firestore.Firestore,
   collectionPath: string,
   docId: string,
   params: firestore.UpdateData<T>

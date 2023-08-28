@@ -18,10 +18,9 @@ const serverTimestamp_1 = require("./serverTimestamp");
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { add } from '@skeet-framework/firestore'
  *
- * const db = admin.firestore();
+ * const db = firestore();
  * const data: User = {
  *   name: "John Doe",
  *   age: 30

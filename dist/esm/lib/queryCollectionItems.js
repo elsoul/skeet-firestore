@@ -14,10 +14,8 @@ import { createFirestoreDataConverter } from './createFirestoreDataConverter';
  * @example
  * ```typescript
  * import { firestore } from 'firebase-admin'
- * import * as admin from 'firebase-admin'
  * import { query } from '@skeet-framework/firestore'
- *
- * const db = admin.firestore();
+ * const db = firestore();
  *
  * // Simple query to get users over 25 years old
  * const simpleConditions: QueryCondition[] = [

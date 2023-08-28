@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin'
-import * as admin from 'firebase-admin'
 /**
  * Retrieves a document from Firestore based on the provided document reference.
  *
@@ -33,7 +32,7 @@ import * as admin from 'firebase-admin'
  * ```
  */
 export const getCollectionItem = async <T>(
-  db: admin.firestore.Firestore,
+  db: firestore.Firestore,
   collectionPath: string,
   docId: string
 ): Promise<T> => {

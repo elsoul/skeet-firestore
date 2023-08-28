@@ -1,5 +1,4 @@
 import { firestore } from 'firebase-admin';
-import * as admin from 'firebase-admin';
 /**
  * Retrieves a document from Firestore based on the provided document reference.
  *
@@ -32,4 +31,4 @@ import * as admin from 'firebase-admin';
  * run();
  * ```
  */
-export declare const getCollectionItem: <T>(db: admin.firestore.Firestore, collectionPath: string, docId: string) => Promise<T>;
+export declare const getCollectionItem: <T>(db: firestore.Firestore, collectionPath: string, docId: string) => Promise<T>;
