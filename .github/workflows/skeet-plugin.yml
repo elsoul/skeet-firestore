@@ -20,6 +20,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm i -g yarn
+      - run: npm i -g yarn firebase-tools
       - run: yarn install
-      - run: yarn test
+      - run: yarn test:ci
