@@ -145,7 +145,7 @@ run()
 ```typescript
 import { firestore } from 'firebase-admin'
 import * as admin from 'firebase-admin'
-import { query } from '@skeet-framework/firestore'
+import { query, QueryCondition } from '@skeet-framework/firestore'
 
 const db = admin.firestore()
 
@@ -154,10 +154,13 @@ const simpleConditions: QueryCondition[] = [
   { field: 'age', operator: '>', value: 25 },
 ]
 
-// Advanced query to get users over 25 years old, ordered by their names
+// Advanced query to get users over 25 years old, ordered by desc
+// Limitations: If you include a filter with a range comparison (<, <=, >, >=), your first ordering must be on the same field
+// So we can't use multiple fields with a range comparison for now.
+// https://firebase.google.com/docs/firestore/query-data/order-limit-data
 const advancedConditions: QueryCondition[] = [
   { field: 'age', operator: '>', value: 25 },
-  { field: 'name', orderDirection: 'asc' },
+  { field: 'age', orderDirection: 'desc' },
 ]
 
 // Query to get users over 25 years old and limit the results to 5
