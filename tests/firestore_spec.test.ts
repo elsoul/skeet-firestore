@@ -214,6 +214,43 @@ describe('Query Collection Items', () => {
     // because "Exceeded timeout of 5000 ms for a test.
     // See https://jestjs.io/docs/api#testname-fn-timeout
   }, 10000)
+
+  test('should get item from the database using the limited conditions', async () => {
+    const db = adminApp.firestore()
+    const path = 'Users'
+    const users = [
+      { name: 'John Doe1', age: 30 },
+      { name: 'John Doe2', age: 30 },
+      { name: 'John Doe3', age: 30 },
+      { name: 'John Doe4', age: 30 },
+      { name: 'John Doe5', age: 30 },
+      { name: 'John Doe6', age: 30 },
+      { name: 'John Doe7', age: 30 }
+    ]
+    users.forEach(async (user, index) => {
+      await db.doc(`${path}/${index}`).set(user)
+    })
+
+    // Query to get users over 25 years old and limit the results to 5
+    const limitedConditions: QueryCondition[] = [
+      { field: 'age', operator: '>', value: 25 },
+      { limit: 5 },
+    ]
+
+    const fiveUsers = await queryCollectionItems<User>(
+      db,
+      path,
+      limitedConditions
+    )
+
+    expect(fiveUsers.length).toBe(5)
+    expect(fiveUsers[0].name).toBe('John Doe1')
+    expect(fiveUsers[4].name).toBe('John Doe5')
+
+    // set timeout 10000ms
+    // because "Exceeded timeout of 5000 ms for a test.
+    // See https://jestjs.io/docs/api#testname-fn-timeout
+  }, 10000)
 })
 
 describe('Update Collection Item', () => {
