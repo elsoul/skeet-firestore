@@ -4,7 +4,7 @@ import { createFirestoreDataConverter } from './createFirestoreDataConverter'
 /**
  * Represents a condition for querying Firestore collections.
  */
-type QueryCondition = {
+export type QueryCondition = {
   field?: string
   operator?: firestore.WhereFilterOp
   value?: any

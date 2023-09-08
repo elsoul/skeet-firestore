@@ -10,4 +10,5 @@ export {
   updateCollectionItem as update,
   deleteCollectionItem as delete,
 } from './lib'
+export type { QueryCondition } from './lib'
 export { Timestamp, FieldValue } from 'firebase/firestore'
