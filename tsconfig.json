@@ -13,9 +13,18 @@
     "rootDir": ".",
     "sourceMap": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ],
     }
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./test/**/*"]
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./test/**/*"
+  ]
 }

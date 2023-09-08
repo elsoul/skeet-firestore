@@ -804,6 +804,13 @@
     "@firebase/util" "1.9.3"
     tslib "^2.1.0"
 
+"@firebase/rules-unit-testing@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@firebase/rules-unit-testing/-/rules-unit-testing-3.0.0.tgz#ed2010f35974195507337fc5df51998de83d96b9"
+  integrity sha512-Bp3UlIzqROS2Z4tJ4lkDktNwL85TXL3AE/3upiAZTryraMo/A9qPiKOZiDu7hQYrt+9IvWHLMResRbLZ9uHDQw==
+  dependencies:
+    node-fetch "2.6.7"
+
 "@firebase/storage-compat@0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@firebase/storage-compat/-/storage-compat-0.3.2.tgz#51a97170fd652a516f729f82b97af369e5a2f8d7"
@@ -2860,7 +2867,7 @@ firebase-admin@11.10.1:
     "@google-cloud/firestore" "^6.6.0"
     "@google-cloud/storage" "^6.9.5"
 
-firebase@^10.3.0:
+firebase@10.3.0:
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-10.3.0.tgz#17695cf0f97f636fe31daf4e7d1e0c3df223a202"
   integrity sha512-1dy6KqAvGlnFUEFE+IaHQNygG/4v1OwB5KVIC/G1/qwbHEFws0FVHe3n/aRZ+Oo0tINO9s2Lim496p9wprMbNQ==

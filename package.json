@@ -24,7 +24,9 @@
   },
   "homepage": "https://skeet.dev",
   "scripts": {
-    "test": "jest --coverage=false --detectOpenHandles --maxWorkers=1",
+    "test": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 jest --coverage=false --detectOpenHandles --maxWorkers=1 --forceExit",
+    "test:ci": "firebase emulators:exec --only firestore 'yarn run test'",
+    "dev:emulator": "firebase emulators:start --only firestore --project fakeproject",
     "build": "yarn build-doc && yarn version:update && yarn build:cjs && yarn build:esm",
     "version:update": "ts-node -r tsconfig-paths/register --transpile-only release.ts",
     "build:cjs": "tsc -b tsconfig.cjs.json",
@@ -42,6 +44,7 @@
     "node-fetch": "2.6.9"
   },
   "devDependencies": {
+    "@firebase/rules-unit-testing": "3.0.0",
     "@types/jest": "29.2.5",
     "@types/node": "18.11.9",
     "@types/node-fetch": "2.6.2",

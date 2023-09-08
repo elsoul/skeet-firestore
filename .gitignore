@@ -39,6 +39,7 @@ gcloud-key.json
 #firebase
 .firebase
 firebase-debug.log
+firestore-debug.log
 
 .env
 .env.production
