@@ -2,7 +2,7 @@ import { firestore } from 'firebase-admin';
 /**
  * Represents a condition for querying Firestore collections.
  */
-type QueryCondition = {
+export type QueryCondition = {
     field?: string;
     operator?: firestore.WhereFilterOp;
     value?: any;
@@ -69,4 +69,3 @@ type QueryCondition = {
  * ```
  */
 export declare const queryCollectionItems: <T extends firestore.DocumentData>(db: firestore.Firestore, collectionPath: string, conditions: QueryCondition[]) => Promise<T[]>;
-export {};
