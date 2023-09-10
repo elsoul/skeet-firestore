@@ -227,9 +227,10 @@ describe('Query Collection Items', () => {
       { name: 'John Doe6', age: 35 },
       { name: 'John Doe7', age: 36 },
     ]
-    users.forEach(async (user, index) => {
+
+    for await (const [index, user] of users.entries()) {
       await db.doc(`${path}/${index}`).set(user)
-    })
+    }
 
     // Query to get users over 25 years old and limit the results to 5
     const limitedConditions: QueryCondition[] = [
