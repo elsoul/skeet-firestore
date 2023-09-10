@@ -25,10 +25,6 @@ import { createDocRef } from './createDocRef';
  */
 export const addCollectionItem = async (db, collectionPath, params, id) => {
     try {
-        console.log(`db:`, db);
-        console.log(`collectionPath:`, collectionPath);
-        console.log(`params:`, params);
-        console.log(`id:`, id);
         if (id) {
             const docRef = createDocRef(db, collectionPath, id);
             await setDoc(docRef, {
