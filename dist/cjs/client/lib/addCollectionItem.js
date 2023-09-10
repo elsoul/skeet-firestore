@@ -28,10 +28,6 @@ const createDocRef_1 = require("./createDocRef");
  */
 const addCollectionItem = async (db, collectionPath, params, id) => {
     try {
-        console.log(`db:`, db);
-        console.log(`collectionPath:`, collectionPath);
-        console.log(`params:`, params);
-        console.log(`id:`, id);
         if (id) {
             const docRef = (0, createDocRef_1.createDocRef)(db, collectionPath, id);
             await (0, firestore_1.setDoc)(docRef, {
