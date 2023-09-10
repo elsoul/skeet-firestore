@@ -24,7 +24,7 @@
   },
   "homepage": "https://skeet.dev",
   "scripts": {
-    "test": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 jest --coverage=false --maxWorkers=1 --forceExit",
+    "test": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 jest --coverage=false --detectOpenHandles --maxWorkers=1 --forceExit",
     "test:ci": "npx firebase emulators:exec --only firestore 'yarn run test'",
     "dev:emulator": "firebase emulators:start --only firestore --project fakeproject",
     "build": "yarn build-doc && yarn version:update && yarn build:cjs && yarn build:esm",

@@ -220,12 +220,12 @@ describe('Query Collection Items', () => {
     const path = 'Users'
     const users = [
       { name: 'John Doe1', age: 30 },
-      { name: 'John Doe2', age: 30 },
-      { name: 'John Doe3', age: 30 },
-      { name: 'John Doe4', age: 30 },
-      { name: 'John Doe5', age: 30 },
-      { name: 'John Doe6', age: 30 },
-      { name: 'John Doe7', age: 30 }
+      { name: 'John Doe2', age: 31 },
+      { name: 'John Doe3', age: 32 },
+      { name: 'John Doe4', age: 33 },
+      { name: 'John Doe5', age: 34 },
+      { name: 'John Doe6', age: 35 },
+      { name: 'John Doe7', age: 36 },
     ]
     users.forEach(async (user, index) => {
       await db.doc(`${path}/${index}`).set(user)
@@ -234,6 +234,7 @@ describe('Query Collection Items', () => {
     // Query to get users over 25 years old and limit the results to 5
     const limitedConditions: QueryCondition[] = [
       { field: 'age', operator: '>', value: 25 },
+      { field: 'age', orderDirection: 'asc' },
       { limit: 5 },
     ]
 
