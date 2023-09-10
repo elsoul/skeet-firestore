@@ -35,7 +35,8 @@
     "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
     "publish": "npm publish",
     "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint --ext .ts,.js --fix ."
   },
   "dependencies": {
     "dotenv": "16.0.3",
@@ -49,6 +50,8 @@
     "@types/jest": "29.2.5",
     "@types/node": "18.11.9",
     "@types/node-fetch": "2.6.2",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
     "babel-loader": "9.1.2",
     "esbuild": "0.17.7",
     "eslint": "8.27.0",
