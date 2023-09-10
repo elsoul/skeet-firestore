@@ -34,7 +34,8 @@
     "build-doc": "typedoc src/index.ts --out docs",
     "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
     "publish": "npm publish",
-    "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts"
+    "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "dotenv": "16.0.3",
@@ -52,6 +53,8 @@
     "esbuild": "0.17.7",
     "eslint": "8.27.0",
     "eslint-config-prettier": "8.5.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
     "npm-check-updates": "16.4.1",
     "prettier": "2.7.1",
     "ts-jest": "29.0.5",
@@ -60,5 +63,8 @@
     "tsconfig-paths": "4.1.2",
     "typedoc": "0.24.7",
     "typescript": "5.0.4"
+  },
+  "lint-staged": {
+    "*.{ts,css,md}": "prettier --write"
   }
 }
