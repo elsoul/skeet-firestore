@@ -11,7 +11,10 @@
       "require": "./dist/cjs/index.js"
     },
     "./client": {
-      "import": "./dist/esm/client/index.js",
+      "import": {
+        "types": "./dist/esm/client/index.d.ts",
+        "default": "./dist/esm/client/index.js"
+      },
       "require": "./dist/cjs/client/index.js"
     }
   },
