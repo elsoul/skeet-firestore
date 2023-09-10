@@ -28,6 +28,10 @@ const createDocRef_1 = require("./createDocRef");
  */
 const addCollectionItem = async (db, collectionPath, params, id) => {
     try {
+        console.log(`db:`, db);
+        console.log(`collectionPath:`, collectionPath);
+        console.log(`params:`, params);
+        console.log(`id:`, id);
         if (id) {
             const docRef = (0, createDocRef_1.createDocRef)(db, collectionPath, id);
             await (0, firestore_1.setDoc)(docRef, {
@@ -39,11 +43,13 @@ const addCollectionItem = async (db, collectionPath, params, id) => {
         }
         else {
             const collectionRef = (0, createCollectionRef_1.createCollectionRef)(db, collectionPath);
+            console.log(`colelctionRef:`, collectionRef);
             const data = await (0, firestore_1.addDoc)(collectionRef, {
                 ...params,
                 createdAt: (0, firestore_1.serverTimestamp)(),
                 updatedAt: (0, firestore_1.serverTimestamp)(),
             });
+            console.log('data:', data);
             if (!data) {
                 throw new Error('no data');
             }
