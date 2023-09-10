@@ -10,15 +10,17 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     },
-    "./client.js": {
-      "import": {
-        "types": "./dist/esm/client/index.d.ts",
-        "default": "./dist/esm/client/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/client/index.d.ts",
-        "default": "./dist/cjs/client/index.js"
-      }
+    "./client": {
+      "import": "./dist/esm/client/index.js",
+      "require": "./dist/cjs/client/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "client": [
+        "./dist/esm/client/index.d.ts",
+        "./dist/cjs/client/index.d.ts"
+      ]
     }
   },
   "repository": {
@@ -48,7 +50,7 @@
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
     "build-doc": "typedoc src/index.ts --out docs",
-    "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
+    "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.mts",
     "publish": "npm publish",
     "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts",
     "prepare": "husky install"
