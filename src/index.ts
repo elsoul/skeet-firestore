@@ -12,5 +12,3 @@ export {
 } from './lib'
 export type { QueryCondition } from './lib'
 export { Timestamp, FieldValue } from 'firebase/firestore'
-
-export * as client from './client'
