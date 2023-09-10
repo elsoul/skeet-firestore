@@ -15,7 +15,10 @@
         "types": "./dist/esm/client/index.d.ts",
         "default": "./dist/esm/client/index.js"
       },
-      "require": "./dist/cjs/client/index.js"
+      "require": {
+        "types": "./dist/cjs/client/index.d.ts",
+        "default": "./dist/cjs/client/index.js"
+      }
     }
   },
   "repository": {
