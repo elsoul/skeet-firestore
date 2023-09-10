@@ -5,24 +5,6 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    },
-    "./client": {
-      "import": "./dist/esm/client/index.js",
-      "require": "./dist/cjs/client/index.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "client": [
-        "./dist/esm/client/index.d.ts",
-        "./dist/cjs/client/index.d.ts"
-      ]
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/elsoul/skeet-firestore.git"
@@ -49,7 +31,7 @@
     "version:update": "ts-node -r tsconfig-paths/register --transpile-only release.ts",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
-    "build-doc": "typedoc src/index.ts --out docs && typedoc src/client/index.ts --out docs/client",
+    "build-doc": "typedoc src/index.ts --out docs",
     "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
     "publish": "npm publish",
     "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts",

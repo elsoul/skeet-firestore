@@ -25,7 +25,8 @@
 
 Skeet Firestore Plugin for CRUD Firestore operation with Firestore Converter.
 Type safe, easy to use, and easy to test.
-This plugin is for both serverside with Firebase Admin SDK and clientside with Firebase Client SDK.
+This plugin is for serverside with Firebase Admin SDK.
+(Client side helper functions for Firestore is in ./lib/skeet/firestore on the Skeet Client)
 
 # Installation
 
