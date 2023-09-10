@@ -39,10 +39,6 @@ export const addCollectionItem = async <T extends DocumentData>(
   id?: string
 ): Promise<DocumentReference<T>> => {
   try {
-    console.log(`db:`, db)
-    console.log(`collectionPath:`, collectionPath)
-    console.log(`params:`, params)
-    console.log(`id:`, id)
     if (id) {
       const docRef = createDocRef<T>(db, collectionPath, id)
       await setDoc(docRef, {
