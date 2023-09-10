@@ -1,1 +1,0 @@
-export declare const updateChildCollectionItem: <Child, Parent>(parentCollectionName: string, childCollectionName: string, parentId: string, childId: string, params: Partial<Child>) => Promise<boolean>;
