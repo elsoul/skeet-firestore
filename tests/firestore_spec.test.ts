@@ -129,7 +129,7 @@ describe('Adds Collection Items', () => {
     await addMultipleCollectionItems<User>(db, path, users)
 
     const querySnapshot = await db.collection(path).get()
-    let results: User[] = []
+    const results: User[] = []
     querySnapshot.forEach((doc) => {
       results.push(doc.data() as User)
     })
