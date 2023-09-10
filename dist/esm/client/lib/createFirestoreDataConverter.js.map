@@ -1,0 +1,1 @@
+{"version":3,"file":"createFirestoreDataConverter.js","sourceRoot":"","sources":["../../../../src/client/lib/createFirestoreDataConverter.ts"],"names":[],"mappings":"AAMA,MAAM,CAAC,MAAM,4BAA4B,GAAG,GAEb,EAAE;IAC/B,OAAO;QACL,WAAW,CAAC,IAAO;YACjB,OAAO,IAAI,CAAA;QACb,CAAC;QACD,aAAa,CAAC,QAAkC;YAC9C,OAAO,QAAQ,CAAC,IAAI,EAAE,CAAA;QACxB,CAAC;KACF,CAAA;AACH,CAAC,CAAA"}
