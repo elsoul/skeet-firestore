@@ -49,8 +49,8 @@
     "version:update": "ts-node -r tsconfig-paths/register --transpile-only release.ts",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
-    "build-doc": "typedoc src/index.ts --out docs",
-    "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.mts",
+    "build-doc": "typedoc src/index.ts --out docs && typedoc src/client/index.ts --out docs/client",
+    "v": "ts-node -r tsconfig-paths/register --resolveJsonModule release.ts",
     "publish": "npm publish",
     "dev": "npx ts-node -r tsconfig-paths/register --transpile-only src/index.ts",
     "prepare": "husky install"
