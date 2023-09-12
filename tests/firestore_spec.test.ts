@@ -289,7 +289,7 @@ describe('Update Collection Item', () => {
     const thrownAction = async () => {
       await updateCollectionItem<User>(db, path, 'ignore', updatedData)
     }
-    expect(thrownAction).rejects.toThrow()
+    await expect(thrownAction).rejects.toThrow()
   })
 })
 
@@ -320,6 +320,6 @@ describe('Delete Collection Item', () => {
     const thrownAction = async () => {
       await deleteCollectionItem(db, path, 'ignore')
     }
-    expect(thrownAction).rejects.toThrow()
+    await expect(await thrownAction()).toBe(undefined)
   })
 })
