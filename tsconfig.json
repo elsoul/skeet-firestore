@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "rootDir": ".",
     "sourceMap": true,
@@ -17,6 +18,6 @@
       "@lib/*": ["./lib/*"]
     }
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./test/**/*"]
+  "include": ["src/**/*", "tests/**/*", "release.ts", "jest.config.js"],
+  "exclude": ["dist", "node_modules"]
 }

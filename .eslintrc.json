@@ -5,6 +5,7 @@
     "prettier"
   ],
   "parserOptions": {
+    "project": "./tsconfig.json",
     "sourceType": "module",
     "ecmaVersion": "latest"
   },
@@ -17,6 +18,13 @@
     "@typescript-eslint/no-unused-vars": 0,
     "no-undef": 0,
     "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
     "@typescript-eslint/ban-ts-comment": [
       "off",
       {
