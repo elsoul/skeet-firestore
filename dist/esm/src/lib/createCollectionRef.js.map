@@ -1,0 +1,1 @@
+{"version":3,"file":"createCollectionRef.js","sourceRoot":"","sources":["../../../../src/lib/createCollectionRef.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,4BAA4B,EAAE,MAAM,gCAAgC,CAAA;AAG7E,MAAM,CAAC,MAAM,mBAAmB,GAAG,CACjC,EAAuB,EACvB,cAAsB,EACtB,EAAE;IACF,OAAO,EAAE;SACN,UAAU,CAAC,cAAc,CAAC;SAC1B,aAAa,CAAC,4BAA4B,EAAK,CAAC,CAAA;AACrD,CAAC,CAAA"}

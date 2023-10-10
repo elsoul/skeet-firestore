@@ -1,7 +1,7 @@
 .next
-out
-dist
-build
+out/
+dist/
+build/
 src/__generated__
 src/schema.graphql
-docs
+docs/
