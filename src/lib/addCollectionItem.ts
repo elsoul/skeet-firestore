@@ -56,11 +56,14 @@ export const addCollectionItem = async <T extends firestore.DocumentData>(
 
     if (id) {
       const docRef = collectionRef.doc(id)
-      await docRef.set({
-        ...params,
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp(),
-      })
+      await docRef.set(
+        {
+          ...params,
+          createdAt: serverTimestamp(),
+          updatedAt: serverTimestamp(),
+        },
+        { merge: true }
+      )
 
       return docRef
     } else {
