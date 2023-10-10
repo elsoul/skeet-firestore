@@ -31,5 +31,6 @@
         "ts-ignore": "allow-with-description"
       }
     ]
-  }
+  },
+  "ignorePatterns": ["dist/"]
 }
