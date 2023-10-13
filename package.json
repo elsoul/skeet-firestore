@@ -1,6 +1,6 @@
 {
   "name": "@skeet-framework/firestore",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Skeet Framework Plugin - Firestore",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -27,7 +27,7 @@
     "test": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 jest --coverage=false --maxWorkers=1 --forceExit",
     "test:ci": "npx firebase emulators:exec --only firestore 'yarn run test'",
     "dev:emulator": "firebase emulators:start --only firestore --project fakeproject",
-    "build": "yarn build-doc && yarn version:update && yarn build:cjs && yarn build:esm",
+    "build": "yarn version:update && yarn build:cjs && yarn build:esm",
     "version:update": "ts-node -r tsconfig-paths/register --transpile-only release.ts",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",

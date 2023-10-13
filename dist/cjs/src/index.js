@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FieldValue = exports.Timestamp = exports.delete = exports.update = exports.query = exports.adds = exports.createCollectionRef = exports.serverTimestamp = exports.add = exports.get = exports.createFirestoreDataConverter = exports.createDataRef = void 0;
+exports.FieldValue = exports.Timestamp = exports.remove = exports.update = exports.query = exports.adds = exports.createCollectionRef = exports.serverTimestamp = exports.add = exports.get = exports.createFirestoreDataConverter = exports.createDataRef = void 0;
 var lib_1 = require("./lib");
 Object.defineProperty(exports, "createDataRef", { enumerable: true, get: function () { return lib_1.createDataRef; } });
 Object.defineProperty(exports, "createFirestoreDataConverter", { enumerable: true, get: function () { return lib_1.createFirestoreDataConverter; } });
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "createCollectionRef", { enumerable: true, get: f
 Object.defineProperty(exports, "adds", { enumerable: true, get: function () { return lib_1.addMultipleCollectionItems; } });
 Object.defineProperty(exports, "query", { enumerable: true, get: function () { return lib_1.queryCollectionItems; } });
 Object.defineProperty(exports, "update", { enumerable: true, get: function () { return lib_1.updateCollectionItem; } });
-Object.defineProperty(exports, "delete", { enumerable: true, get: function () { return lib_1.deleteCollectionItem; } });
+Object.defineProperty(exports, "remove", { enumerable: true, get: function () { return lib_1.deleteCollectionItem; } });
 var firestore_1 = require("firebase/firestore");
 Object.defineProperty(exports, "Timestamp", { enumerable: true, get: function () { return firestore_1.Timestamp; } });
 Object.defineProperty(exports, "FieldValue", { enumerable: true, get: function () { return firestore_1.FieldValue; } });

@@ -8,7 +8,7 @@ export {
   addMultipleCollectionItems as adds,
   queryCollectionItems as query,
   updateCollectionItem as update,
-  deleteCollectionItem as delete,
+  deleteCollectionItem as remove,
 } from './lib'
 export type { QueryCondition } from './lib'
 export { Timestamp, FieldValue } from 'firebase/firestore'
