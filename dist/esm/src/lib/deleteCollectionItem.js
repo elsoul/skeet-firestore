@@ -13,7 +13,7 @@
  * ```typescript
  * import { firestore } from 'firebase-admin'
  * import * as admin from 'firebase-admin'
- * import { delete } from '@skeet-framework/firestore'
+ * import { remove } from '@skeet-framework/firestore'
  *
  * const db = admin.firestore();
  *
@@ -21,7 +21,7 @@
  *   try {
  *     const path = 'Users'
  *     const docId = '123456'; // Assuming this ID exists in the Users collection.
- *     const success = await delete(db, path, docId);
+ *     const success = await remove(db, path, docId);
  *     if (success) {
  *       console.log(`Document with ID ${docId} deleted successfully.`);
  *     }
