@@ -1,1 +1,0 @@
-{"version":3,"file":"serverTimestamp.js","sourceRoot":"","sources":["../../../src/lib/serverTimestamp.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,gBAAgB,CAAA;AAE1C,MAAM,CAAC,MAAM,eAAe,GAAG,GAAG,EAAE;IAClC,OAAO,SAAS,CAAC,UAAU,CAAC,eAAe,EAAE,CAAA;AAC/C,CAAC,CAAA"}

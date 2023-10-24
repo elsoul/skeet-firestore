@@ -6,9 +6,7 @@ exports.getCollectionItem = void 0;
  *
  * @param dataRef - The document reference pointing to the desired Firestore document.
  *
- * @returns The data of the document as an object of type T.
- *
- * @throws Throws an exception if the document doesn't exist or if there is no data in the document.
+ * @returns The data of the document as an object of type T or null if the document does not exist.
  *
  * @example
  * ```typescript
