@@ -129,8 +129,8 @@ async function expectPermissionGetSucceeds(promise) {
         const user = { name: 'John Doe', age: 30 };
         await db.doc(`${path}/${docId}`).set(user);
         const result = await (0, index_1.getCollectionItem)(db, path, docId);
-        (0, globals_1.expect)(result.name).toBe('John Doe');
-        (0, globals_1.expect)(result.age).toBe(30);
+        (0, globals_1.expect)(result === null || result === void 0 ? void 0 : result.name).toBe('John Doe');
+        (0, globals_1.expect)(result === null || result === void 0 ? void 0 : result.age).toBe(30);
     });
 });
 (0, globals_1.describe)('Query Collection Items', () => {

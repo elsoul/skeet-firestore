@@ -36,11 +36,11 @@ export const getCollectionItem = async (db, collectionPath, docId) => {
         .doc(docId);
     const doc = await dataRef.get();
     if (!doc.exists) {
-        throw new Error('Document not found at path: ' + dataRef.path);
+        return null;
     }
     const data = doc.data();
     if (!data)
-        throw new Error('Document data not found at path: ' + dataRef.path);
+        return null;
     return data;
 };
 //# sourceMappingURL=getCollectionItem.js.map

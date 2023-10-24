@@ -104,8 +104,8 @@ describe('Get Collection Item', () => {
         const user = { name: 'John Doe', age: 30 };
         await db.doc(`${path}/${docId}`).set(user);
         const result = await getCollectionItem(db, path, docId);
-        expect(result.name).toBe('John Doe');
-        expect(result.age).toBe(30);
+        expect(result === null || result === void 0 ? void 0 : result.name).toBe('John Doe');
+        expect(result === null || result === void 0 ? void 0 : result.age).toBe(30);
     });
 });
 describe('Query Collection Items', () => {

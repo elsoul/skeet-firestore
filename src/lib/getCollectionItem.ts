@@ -35,15 +35,15 @@ export const getCollectionItem = async <T>(
   db: firestore.Firestore,
   collectionPath: string,
   docId: string
-): Promise<T> => {
+): Promise<T | null> => {
   const dataRef = db
     .collection(collectionPath)
     .doc(docId) as FirebaseFirestore.DocumentReference<T>
   const doc = await dataRef.get()
   if (!doc.exists) {
-    throw new Error('Document not found at path: ' + dataRef.path)
+    return null
   }
   const data = doc.data()
-  if (!data) throw new Error('Document data not found at path: ' + dataRef.path)
+  if (!data) return null
   return data
 }

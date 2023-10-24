@@ -9,6 +9,7 @@ export {
   queryCollectionItems as query,
   updateCollectionItem as update,
   deleteCollectionItem as remove,
+  upsertCollectionItem as upsert,
 } from './lib'
 export type { QueryCondition } from './lib'
 export { Timestamp, FieldValue } from 'firebase/firestore'

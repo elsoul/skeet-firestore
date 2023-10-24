@@ -149,8 +149,8 @@ describe('Get Collection Item', () => {
 
     const result = await getCollectionItem<User>(db, path, docId)
 
-    expect(result.name).toBe('John Doe')
-    expect(result.age).toBe(30)
+    expect(result?.name).toBe('John Doe')
+    expect(result?.age).toBe(30)
   })
 })
 

@@ -24,4 +24,5 @@ __exportStar(require("./addMultipleCollectionItems"), exports);
 __exportStar(require("./queryCollectionItems"), exports);
 __exportStar(require("./updateCollectionItem"), exports);
 __exportStar(require("./deleteCollectionItem"), exports);
+__exportStar(require("./upsertCollectionItem"), exports);
 //# sourceMappingURL=index.js.map
