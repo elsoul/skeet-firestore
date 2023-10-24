@@ -11,5 +11,5 @@ export {
   deleteCollectionItem as remove,
   upsertCollectionItem as upsert,
 } from './lib'
-export type { QueryCondition } from './lib'
+export type { QueryCondition, WithFieldValue } from './lib'
 export { Timestamp, FieldValue } from 'firebase/firestore'
